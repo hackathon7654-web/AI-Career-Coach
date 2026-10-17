@@ -55,6 +55,15 @@ async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
   // Custom header for CSRF defense-in-depth on cookie requests
   headers.set('X-Requested-With', 'XMLHttpRequest');
 
+  // Support Bearer/Header token fallback for cross-domain requests
+  const sessionToken = sessionStore.getSessionToken();
+  if (sessionToken && !headers.has('X-Session-Token')) {
+    headers.set('X-Session-Token', sessionToken);
+    if (!headers.has('Authorization')) {
+      headers.set('Authorization', `Bearer ${sessionToken}`);
+    }
+  }
+
   const config: RequestInit = {
     ...options,
     headers,
@@ -96,10 +105,13 @@ export const sessionStore = {
   setJobId: (id: string) => localStorage.setItem('proofpath_job_id', id),
   getRunId: (): string | null => localStorage.getItem('proofpath_run_id'),
   setRunId: (id: string) => localStorage.setItem('proofpath_run_id', id),
+  getSessionToken: (): string | null => localStorage.getItem('proofpath_session_token'),
+  setSessionToken: (token: string) => localStorage.setItem('proofpath_session_token', token),
   clear: () => {
     localStorage.removeItem('proofpath_portfolio_id');
     localStorage.removeItem('proofpath_job_id');
     localStorage.removeItem('proofpath_run_id');
+    localStorage.removeItem('proofpath_session_token');
   },
 };
 
@@ -136,11 +148,15 @@ export const api = {
       profile_url: string;
       scan_status: string;
       created_at: string;
+      session_token?: string;
     }>('/api/portfolio/intake', {
       method: 'POST',
       body: JSON.stringify({ github_username }),
     });
     sessionStore.setPortfolioId(res.portfolio_id);
+    if (res.session_token) {
+      sessionStore.setSessionToken(res.session_token);
+    }
     return res;
   },
 

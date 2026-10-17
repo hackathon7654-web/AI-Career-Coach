@@ -102,6 +102,7 @@ class CandidateIntakeResponse(BaseModel):
     scan_status: str
     created_at: str
     message: str = "Candidate session initialized. Cookie set."
+    session_token: Optional[str] = Field(None, description="Candidate session authorization token.")
 
 
 class RepositoryItem(BaseModel):

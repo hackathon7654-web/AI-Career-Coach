@@ -119,6 +119,7 @@ async def candidate_intake(
         profile_url=portfolio["profile_url"],
         scan_status=portfolio["scan_status"],
         created_at=portfolio["created_at"],
+        session_token=raw_token,
     )
 
 

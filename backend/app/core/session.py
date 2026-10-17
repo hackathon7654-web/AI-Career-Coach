@@ -142,7 +142,11 @@ async def verify_portfolio_session(
             request.headers.get("X-Requested-With") or request.headers.get("X-Session-Token")
         )
         # Origin must be whitelisted OR custom header present
-        is_allowed_origin = origin and origin in settings.FRONTEND_ORIGINS
+        is_allowed_origin = origin and (
+            origin in settings.FRONTEND_ORIGINS
+            or origin.endswith(".vercel.app")
+            or "vercel.app" in origin
+        )
         if not is_allowed_origin and not has_custom_header:
             logger.warning(
                 f"CSRF protection triggered on {request.method} {request.url.path} from Origin={origin}"
