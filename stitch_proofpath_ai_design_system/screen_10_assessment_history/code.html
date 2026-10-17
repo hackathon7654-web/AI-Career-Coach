@@ -1,0 +1,531 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "outline": "#74777f",
+          "secondary-fixed": "#d3e3ff",
+          "error-container": "#ffdad6",
+          "on-error": "#ffffff",
+          "on-tertiary-fixed": "#001e2e",
+          "surface-container": "#eceef0",
+          "on-secondary-fixed-variant": "#004883",
+          "primary-fixed-dim": "#b0c8f1",
+          "on-error-container": "#93000a",
+          "outline-variant": "#c4c6cf",
+          "tertiary": "#001a28",
+          "surface-tint": "#485f83",
+          "on-primary-container": "#7e95bc",
+          "surface-dim": "#d8dadc",
+          "tertiary-fixed-dim": "#92cef6",
+          "secondary-container": "#8abbff",
+          "on-tertiary-fixed-variant": "#004c6c",
+          "tertiary-fixed": "#c7e7ff",
+          "primary-fixed": "#d5e3ff",
+          "surface-bright": "#f7f9fb",
+          "on-background": "#191c1e",
+          "on-surface-variant": "#44474e",
+          "on-surface": "#191c1e",
+          "on-secondary": "#ffffff",
+          "on-primary": "#ffffff",
+          "surface": "#f7f9fb",
+          "tertiary-container": "#003046",
+          "on-primary-fixed-variant": "#30476a",
+          "secondary-fixed-dim": "#a3c9ff",
+          "inverse-primary": "#b0c8f1",
+          "on-tertiary-container": "#5e9ac0",
+          "inverse-on-surface": "#eff1f3",
+          "primary": "#001835",
+          "surface-variant": "#e0e3e5",
+          "on-primary-fixed": "#001b3b",
+          "on-secondary-fixed": "#001c39",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-container": "#004a87",
+          "on-tertiary": "#ffffff",
+          "surface-container-low": "#f2f4f6",
+          "secondary": "#27609e",
+          "error": "#ba1a1a",
+          "primary-container": "#142d4e",
+          "surface-container-highest": "#e0e3e5",
+          "surface-container-high": "#e6e8ea",
+          "inverse-surface": "#2d3133",
+          "background": "#f7f9fb"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter-desktop": "1.5rem",
+          "margin": "1rem",
+          "gutter": "1rem",
+          "margin-desktop": "3rem",
+          "space-lg": "1.5rem",
+          "space-xs": "0.25rem",
+          "margin-tablet": "2rem",
+          "space-xl": "2rem",
+          "space-md": "1rem",
+          "space-sm": "0.5rem"
+        },
+        "fontFamily": {
+          "body-md": ["Geist"],
+          "body-sm": ["Geist"],
+          "body-lg": ["Geist"],
+          "headline-md": ["Geist"],
+          "label-sm": ["JetBrains Mono"],
+          "display-mobile": ["Geist"],
+          "code-inline": ["JetBrains Mono"],
+          "label-md": ["JetBrains Mono"],
+          "headline-lg": ["Geist"],
+          "headline-lg-mobile": ["Geist"],
+          "display": ["Geist"],
+          "headline-sm": ["Geist"]
+        },
+        "fontSize": {
+          "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "body-sm": ["12px", {"lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400"}],
+          "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "headline-md": ["20px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+          "display-mobile": ["30px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+          "code-inline": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
+          "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+          "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+          "headline-lg-mobile": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+          "headline-sm": ["16px", {"lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600"}]
+        }
+      }
+    }
+  };</script></head><body class="bg-background font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant"><div class="h-14 max-w-7xl mx-auto px-gutter-desktop flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold">ProofPath AI</span></div></div><nav class="flex items-center gap-space-lg text-body-sm" data-active-classes="text-secondary border-b-2 border-secondary font-medium pb-4 pt-4"><a class="text-on-surface-variant hover:text-on-surface transition-colors pb-4 pt-4" data-path="connect-portfolio" href="#">1. GitHub Portfolio</a><a class="text-on-surface-variant hover:text-on-surface transition-colors pb-4 pt-4" data-path="select-repositories" href="#">2. Repositories</a><a class="text-on-surface-variant hover:text-on-surface transition-colors pb-4 pt-4" data-path="target-job" href="#">3. Job Requirements</a><a class="text-secondary border-b-2 border-secondary font-medium pb-4 pt-4" data-path="skill-gap-assessment" href="#">4. Skill Assessment</a></nav><div class="flex items-center gap-space-md"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 bg-background min-h-[calc(100vh-56px)]"><div class="flex flex-col w-full">
+<div class="w-full bg-background px-gutter-desktop py-space-xl">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Header / Breadcrumb Context -->
+<section class="flex flex-col gap-space-sm bg-surface-container-lowest p-space-lg rounded border border-outline-variant"><div class="flex flex-wrap items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm text-label-sm font-label-sm text-secondary"><span class="material-symbols-outlined text-[16px]">history</span><span class="tracking-wider uppercase">AUDIT LOG &amp; SNAPSHOT REGISTRY</span><span class="text-outline-variant">•</span><span class="text-on-surface-variant font-code-inline text-code-inline">Historical Record</span></div><div class="flex items-center gap-space-xs"><span class="inline-flex items-center px-space-xs py-0.5 rounded text-label-sm font-label-sm bg-surface-container-low text-on-surface-variant border border-outline-variant font-code-inline">3 EVALUATION RUNS</span></div></div><div class="flex flex-col gap-space-xs"><h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Assessment History</h1><p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">Chronological audit log of evaluated skill-gap assessments. Snapshots record before/after state diffs triggered by analyzed repository commits, rescans, and verified webhook events.</p></div></section>
+<!-- View State Switcher (Active History vs Simulated Empty State) -->
+
+<!-- Main Layout: 2-Column Grid (70% Main, 30% Side) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- MAIN COLUMN (70% width: 8 of 12 cols on desktop) -->
+<main class="lg:col-span-8 flex flex-col gap-space-xl">
+<!-- State Container: Populated Assessment History -->
+<div class="flex flex-col gap-space-xl" id="populatedStateContainer">
+<!-- Timeline / Run List Header -->
+<div class="flex items-center justify-between border-b border-outline-variant pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">layers</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Chronological Snapshot Ledger</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-inline">
+                RECORDS: 3 // ANCHOR: HEAD (main)
+              </span>
+</div>
+<!-- Run 3: Current / Active Baseline -->
+<article class="bg-surface-container-lowest border-2 border-secondary rounded p-space-lg flex flex-col gap-space-md relative">
+<div class="flex flex-wrap items-center justify-between gap-space-sm border-b border-outline-variant pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-bold px-space-xs py-0.5 rounded bg-primary text-on-primary">
+                    SNAPSHOT #3
+                  </span>
+<span class="font-label-sm text-label-sm font-medium px-space-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant border border-outline-variant">
+                    ACTIVE BASELINE
+                  </span>
+<span class="font-label-sm text-label-sm text-outline-variant font-code-inline">SNAP-20250518-7F2D</span>
+</div>
+<div class="flex items-center gap-space-xs text-label-sm font-label-sm text-on-surface-variant font-code-inline">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span class="">Today, 14:32:10 UTC (2025-05-18)</span>
+</div>
+</div>
+<!-- Metadata Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md bg-surface-container-low p-space-md rounded">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Execution Trigger</span>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-primary">
+<span class="material-symbols-outlined text-[16px] text-secondary">webhook</span>
+<span class="">Webhook push event on <code class="font-code-inline text-code-inline font-medium">main</code></span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Triggering Commit</span>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-primary">
+<span class="material-symbols-outlined text-[16px] text-outline">commit</span>
+<a class="font-code-inline text-code-inline text-secondary hover:underline font-semibold" href="https://github.com/user-org/core-services/commit/7f2d8a4" rel="noopener noreferrer" target="_blank">
+                      7f2d8a4
+                    </a>
+<span class="text-on-surface-variant truncate" title="Implement distributed worker queue and idempotency middleware">
+                      "Implement distributed worker queue..."
+                    </span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Target Position Context</span>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-primary">
+<span class="material-symbols-outlined text-[16px] text-outline">work</span>
+<span class="font-medium">Staff Infrastructure Engineer</span>
+<span class="text-on-surface-variant font-code-inline text-code-inline">// Stripe</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Audit Tree Digest</span>
+<span class="font-code-inline text-label-sm text-on-surface-variant truncate" title="9a5e4210fec18b82a3d077468114f16bc457223b8fca8dfa2e612988cb62ef5a">
+                    SHA256: 9a5e4210fec18b82a3d077...
+                  </span>
+</div>
+</div>
+<!-- Status Transition Summary -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Verified Status Delta:</span>
+<div class="p-space-sm rounded bg-surface border border-outline-variant flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm text-body-sm font-body-sm">
+<span class="font-medium text-primary">Distributed Systems &amp; Job Queuing</span>
+<span class="text-outline-variant">→</span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded text-label-sm font-label-sm bg-surface-container-high text-on-surface-variant">
+                      Partially demonstrated
+                    </span>
+<span class="material-symbols-outlined text-[14px] text-secondary">trending_flat</span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded text-label-sm font-label-sm bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[12px]">verified</span> Demonstrated
+                    </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Worker goroutine synchronization loop and backoff queue consumer validated against candidate benchmark rubric.
+                  </p>
+</div>
+</div>
+<!-- Evidence Delta Block -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Code Evidence Delta:</span>
+<div class="bg-surface-container-low rounded p-space-sm font-code-inline text-code-inline flex flex-col gap-1 border border-outline-variant">
+<div class="flex items-start gap-space-sm text-secondary">
+<span class="font-bold select-none">[+]</span>
+<div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-space-sm w-full">
+<a class="text-secondary hover:underline font-semibold" href="https://github.com/user-org/core-services/blob/7f2d8a4/src/queue/worker_pool.go#L42-L118" rel="noopener noreferrer" target="_blank">
+                        src/queue/worker_pool.go#L42-118
+                      </a>
+<span class="text-on-surface-variant text-label-sm">
+                        (goroutine worker pool with ack-retry semantics)
+                      </span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant text-body-sm">
+<span class="font-bold select-none text-outline">[=]</span>
+<span class="">5 existing verified repository evidence references preserved</span>
+</div>
+<div class="flex items-center gap-space-sm text-outline text-body-sm">
+<span class="font-bold select-none">[-]</span>
+<span class="">0 records modified or rescinded</span>
+</div>
+</div>
+</div>
+<div class="flex justify-end items-center pt-space-xs border-t border-outline-variant">
+<button class="inline-flex items-center gap-space-xs text-label-sm font-label-sm text-secondary hover:underline font-semibold" onclick="selectInspectorComparison('snap3_vs_snap2')" type="button">
+<span class="">Compare with Snapshot #2 in Inspector</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</button>
+</div>
+</article>
+<!-- Run 2: Intermediate Evaluation -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm border-b border-outline-variant pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-semibold px-space-xs py-0.5 rounded bg-surface-container-high text-primary">
+                    SNAPSHOT #2
+                  </span>
+<span class="font-label-sm text-label-sm text-outline font-code-inline">SNAP-20250516-C3A1</span>
+</div>
+<div class="flex items-center gap-space-xs text-label-sm font-label-sm text-on-surface-variant font-code-inline">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span class="">May 16, 2025 · 09:15:42 UTC</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md bg-surface-container-low p-space-md rounded">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Execution Trigger</span>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-primary">
+<span class="material-symbols-outlined text-[16px] text-outline">refresh</span>
+<span class="">Manual trigger post repository rescan</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Triggering Commit</span>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-primary">
+<span class="material-symbols-outlined text-[16px] text-outline">commit</span>
+<a class="font-code-inline text-code-inline text-secondary hover:underline font-semibold" href="https://github.com/user-org/core-services/commit/c3a109e" rel="noopener noreferrer" target="_blank">
+                      c3a109e
+                    </a>
+<span class="text-on-surface-variant truncate" title="Refactor database migration scripts and connection pooling">
+                      "Refactor database migration scripts..."
+                    </span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Target Position Context</span>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-primary">
+<span class="material-symbols-outlined text-[16px] text-outline">work</span>
+<span class="font-medium">Staff Infrastructure Engineer</span>
+<span class="text-on-surface-variant font-code-inline text-code-inline">// Stripe</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Preserved Verification Digest</span>
+<span class="font-code-inline text-label-sm text-on-surface-variant truncate" title="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855">
+                    SHA256: e3b0c44298fc1c149afbf4...
+                  </span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Verified Status Delta:</span>
+<div class="p-space-sm rounded bg-surface border border-outline-variant flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm text-body-sm font-body-sm">
+<span class="font-medium text-primary">PostgreSQL Schema Architecture</span>
+<span class="text-outline-variant">→</span>
+<span class="inline-flex items-center px-space-xs py-0.5 rounded text-label-sm font-label-sm bg-error-container text-on-error-container">
+                      Not demonstrated in scanned repositories
+                    </span>
+<span class="material-symbols-outlined text-[14px] text-secondary">trending_flat</span>
+<span class="inline-flex items-center px-space-xs py-0.5 rounded text-label-sm font-label-sm bg-surface-container-high text-on-surface-variant">
+                      Partially demonstrated
+                    </span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Code Evidence Delta:</span>
+<div class="bg-surface-container-low rounded p-space-sm font-code-inline text-code-inline flex flex-col gap-1 border border-outline-variant">
+<div class="flex items-start gap-space-sm text-secondary">
+<span class="font-bold select-none">[+]</span>
+<div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-space-sm w-full">
+<a class="text-secondary hover:underline font-semibold" href="https://github.com/user-org/core-services/blob/c3a109e/migrations/003_pool_tuning.sql" rel="noopener noreferrer" target="_blank">
+                        migrations/003_pool_tuning.sql
+                      </a>
+<span class="text-on-surface-variant text-label-sm">(Transaction isolation tuning &amp; index specs)</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Run 1: Initial Ingestion Baseline -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm border-b border-outline-variant pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-semibold px-space-xs py-0.5 rounded bg-surface-container-high text-primary">
+                    SNAPSHOT #1
+                  </span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant border border-outline-variant uppercase">
+                    GENESIS BASELINE
+                  </span>
+<span class="font-label-sm text-label-sm text-outline font-code-inline">SNAP-20250512-B48F</span>
+</div>
+<div class="flex items-center gap-space-xs text-label-sm font-label-sm text-on-surface-variant font-code-inline">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span class="">May 12, 2025 · 18:04:19 UTC</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md bg-surface-container-low p-space-md rounded">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Execution Trigger</span>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-primary">
+<span class="material-symbols-outlined text-[16px] text-outline">input</span>
+<span class="">Initial repository ingestion (<code class="font-code-inline text-code-inline">user-org/core-services</code>)</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Triggering Commit</span>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-primary">
+<span class="material-symbols-outlined text-[16px] text-outline">commit</span>
+<a class="font-code-inline text-code-inline text-secondary hover:underline font-semibold" href="https://github.com/user-org/core-services/commit/b48f912" rel="noopener noreferrer" target="_blank">
+                      b48f912
+                    </a>
+<span class="text-on-surface-variant">(Initial scanned HEAD)</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Target Position Context</span>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-primary">
+<span class="material-symbols-outlined text-[16px] text-outline">work</span>
+<span class="font-medium">Staff Infrastructure Engineer</span>
+<span class="text-on-surface-variant font-code-inline text-code-inline">// Stripe</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Preserved Verification Digest</span>
+<span class="font-code-inline text-label-sm text-on-surface-variant truncate" title="128f61bc99a542b84cf82e9112440b8a31e847cc0a2e5414d86b81d77a83d76e">
+                    SHA256: 128f61bc99a542b84cf82e...
+                  </span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded p-space-sm border border-outline-variant flex items-start gap-space-sm text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">info</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-medium text-primary">Genesis Baseline Established</span>
+<p class="text-on-surface-variant">
+                    7 requirements rigorously evaluated against repository contents at commit <code class="font-code-inline text-code-inline text-primary">b48f912</code>. Results: 1 Demonstrated, 2 Partially demonstrated, 4 Not demonstrated in scanned repositories. No synthetic prior diff exists.
+                  </p>
+</div>
+</div>
+</article>
+<!-- INTERACTIVE DIFF COMPARISON INSPECTOR -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded p-space-lg flex flex-col gap-space-md" id="diffInspectorSection">
+<div class="flex flex-wrap items-center justify-between gap-space-sm border-b border-outline-variant pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary">difference</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Diff Comparison Inspector</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Explicit before/after state matrix between selected snapshots.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs font-code-inline text-label-sm">
+<span class="px-space-xs py-0.5 bg-surface-container rounded border border-outline-variant text-primary font-medium">Snapshot #2</span>
+<span class="text-outline">vs</span>
+<span class="px-space-xs py-0.5 bg-primary rounded text-on-primary font-medium">Snapshot #3 (Baseline)</span>
+</div>
+</div>
+<!-- Matrix Item 1: Transitioned -->
+<div class="border border-outline-variant rounded p-space-md flex flex-col gap-space-sm bg-surface-container-low">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<span class="font-body-md text-body-md font-semibold text-primary">Requirement: Distributed Systems &amp; Job Queuing</span>
+<span class="font-label-sm text-label-sm text-secondary font-code-inline font-medium uppercase px-space-xs py-0.5 bg-secondary-fixed rounded">
+                    Status Transition Verified
+                  </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Before State -->
+<div class="flex flex-col gap-space-xs bg-surface-container-lowest p-space-sm rounded border border-outline-variant">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Before State (Snapshot #2)</span>
+<span class="inline-flex items-center px-space-xs py-0.5 rounded text-label-sm font-label-sm bg-surface-container-high text-on-surface-variant font-code-inline">
+                        Partially demonstrated
+                      </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Only basic Redis pub/sub client initialization detected in <code class="font-code-inline text-code-inline text-primary">infra/cache.go</code>. No concurrency controls or retry handlers identified.
+                    </p>
+</div>
+<!-- After State -->
+<div class="flex flex-col gap-space-xs bg-surface-container-lowest p-space-sm rounded border border-secondary">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-medium">After State (Snapshot #3)</span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded text-label-sm font-label-sm bg-primary text-on-primary font-code-inline">
+<span class="material-symbols-outlined text-[12px]">verified</span> Demonstrated
+                      </span>
+</div>
+<p class="font-body-sm text-body-sm text-primary">
+                      Worker pool implementation in <code class="font-code-inline text-code-inline font-semibold">src/queue/worker_pool.go</code> verified with concurrency control primitives and bounded buffered worker channels.
+                    </p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs border-t border-outline-variant font-code-inline text-label-sm">
+<span class="text-on-surface-variant">Provenance Proof:</span>
+<a class="text-secondary hover:underline inline-flex items-center gap-1" href="https://github.com/user-org/core-services/commit/7f2d8a4" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">commit</span>
+                    stripe-infra-demo@7f2d8a4
+                  </a>
+<a class="text-secondary hover:underline inline-flex items-center gap-1" href="https://github.com/user-org/core-services/blob/7f2d8a4/src/queue/worker_pool.go" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">description</span>
+                    src/queue/worker_pool.go (lines 42-118)
+                  </a>
+</div>
+</div>
+<!-- Matrix Item 2: Unchanged Requirement -->
+<div class="border border-outline-variant rounded p-space-md flex flex-col gap-space-sm bg-surface-container-lowest">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<span class="font-body-md text-body-md font-semibold text-primary">Requirement: PostgreSQL Schema Architecture</span>
+<span class="font-label-sm text-label-sm text-outline font-code-inline uppercase px-space-xs py-0.5 bg-surface-container rounded">
+                    No Status Shift [Stable]
+                  </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Before State -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-sm rounded border border-outline-variant">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Before State (Snapshot #2)</span>
+<span class="inline-flex items-center px-space-xs py-0.5 rounded text-label-sm font-label-sm bg-surface-container-high text-on-surface-variant font-code-inline">
+                        Partially demonstrated
+                      </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Migration script <code class="font-code-inline text-code-inline">migrations/003_pool_tuning.sql</code> evaluated. Basic transactional syntax validated.
+                    </p>
+</div>
+<!-- After State -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-sm rounded border border-outline-variant">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">After State (Snapshot #3)</span>
+<span class="inline-flex items-center px-space-xs py-0.5 rounded text-label-sm font-label-sm bg-surface-container-high text-on-surface-variant font-code-inline">
+                        Partially demonstrated
+                      </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                      No status shift; 0 new evidence records added in commit <code class="font-code-inline text-code-inline">7f2d8a4</code>. Evaluation preserved without alteration.
+                    </p>
+</div>
+</div>
+<div class="flex items-center gap-space-md pt-space-xs border-t border-outline-variant font-code-inline text-label-sm text-on-surface-variant">
+<span class="">Delta: 0 lines added / 0 lines modified for this requirement category.</span>
+</div>
+</div>
+</section>
+</div>
+<!-- State Container: Honest Empty State (Toggled via JS) -->
+
+</main>
+<!-- SIDE COLUMN (30% width: 4 of 12 cols on desktop) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-lg"><section class="bg-surface-container-lowest border border-outline-variant rounded p-space-lg flex flex-col gap-space-md"><div class="flex items-center gap-space-xs border-b border-outline-variant pb-space-sm"><span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span><h3 class="font-headline-sm text-headline-sm text-primary">Assessment Summary</h3></div><div class="flex flex-col gap-space-sm font-code-inline text-label-md"><div class="flex flex-col gap-0.5"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-body-sm">Current Active Snapshot</span><span class="text-primary font-semibold bg-surface-container-low px-space-xs py-1 rounded border border-outline-variant">SNAP-20250518-7F2D</span></div><div class="flex flex-col gap-0.5"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-body-sm">Total Recorded Runs</span><span class="text-primary font-medium">3 evaluated snapshots</span></div><div class="flex flex-col gap-0.5"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-body-sm">Target Position</span><span class="text-primary font-medium font-body-md">Staff Infrastructure Engineer</span><span class="text-on-surface-variant text-label-sm font-body-sm">Stripe benchmark profile</span></div><div class="flex flex-col gap-0.5 pt-space-xs border-t border-outline-variant"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-body-sm">Linked Repository</span><span class="text-on-surface-variant text-label-sm break-all font-code-inline">user-org/core-services</span></div></div></section><section class="bg-surface-container-lowest border border-outline-variant rounded p-space-lg flex flex-col gap-space-md"><div class="flex items-center gap-space-xs border-b border-outline-variant pb-space-sm"><span class="material-symbols-outlined text-[18px] text-primary">info</span><h3 class="font-headline-sm text-headline-sm text-primary">Snapshot Ledger Overview</h3></div><p class="font-body-md text-body-md text-on-surface-variant">Assessment snapshots record the evolution of verified skill evidence as repository code changes over time. Each run preserves the explicit code references analyzed at that point in history.</p><ul class="flex flex-col gap-space-sm text-body-sm font-body-sm text-on-surface-variant list-none p-0 m-0"><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary mt-0.5">commit</span><span class=""><strong class="text-primary font-medium">Commit Anchored:</strong> Evaluations reflect the state of code at the specific triggering commit SHA.</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary mt-0.5">trending_up</span><span class=""><strong class="text-primary font-medium">Evidence-Based:</strong> Skill transitions occur when substantive implementation code meets rubric criteria.</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary mt-0.5">fact_check</span><span class=""><strong class="text-primary font-medium">Transparent Audit:</strong> Direct links to files and line ranges allow immediate provenance verification.</span></li></ul></section></aside>
+</div>
+</div>
+</div>
+<script>
+    function setAuditViewState(state) {
+      const populated = document.getElementById('populatedStateContainer');
+      const empty = document.getElementById('emptyStateContainer');
+      const btnPopulated = document.getElementById('viewBtnPopulated');
+      const btnEmpty = document.getElementById('viewBtnEmpty');
+
+      if (state === 'empty') {
+        populated.classList.add('hidden');
+        populated.classList.remove('flex');
+        empty.classList.remove('hidden');
+        empty.classList.add('flex');
+
+        btnEmpty.className = "px-space-md py-1 text-label-sm font-label-sm rounded transition-colors bg-secondary text-on-secondary";
+        btnPopulated.className = "px-space-md py-1 text-label-sm font-label-sm rounded transition-colors text-on-surface-variant hover:text-on-surface";
+      } else {
+        empty.classList.add('hidden');
+        empty.classList.remove('flex');
+        populated.classList.remove('hidden');
+        populated.classList.add('flex');
+
+        btnPopulated.className = "px-space-md py-1 text-label-sm font-label-sm rounded transition-colors bg-secondary text-on-secondary";
+        btnEmpty.className = "px-space-md py-1 text-label-sm font-label-sm rounded transition-colors text-on-surface-variant hover:text-on-surface";
+      }
+    }
+
+    function toggleAuditStateFromSandbox() {
+      const populated = document.getElementById('populatedStateContainer');
+      if (populated.classList.contains('hidden')) {
+        setAuditViewState('populated');
+      } else {
+        setAuditViewState('empty');
+      }
+    }
+
+    function selectInspectorComparison(comparisonKey) {
+      const inspector = document.getElementById('diffInspectorSection');
+      if (inspector) {
+        inspector.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        inspector.classList.add('ring-2', 'ring-secondary');
+        setTimeout(() => {
+          inspector.classList.remove('ring-2', 'ring-secondary');
+        }, 1500);
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low border-t border-outline-variant py-space-md"><div class="max-w-7xl mx-auto px-gutter-desktop flex items-center justify-between text-body-sm text-on-surface-variant"><span class="font-label-sm text-label-sm text-outline">ProofPath AI • Assessment History Ledger</span><span class="font-label-sm text-label-sm text-outline">Evidence-based skill evaluation protocol</span></div></footer>
+
+</body></html>

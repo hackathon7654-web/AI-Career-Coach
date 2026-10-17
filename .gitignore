@@ -1,0 +1,31 @@
+# Environment & Secrets
+.env
+*.env
+*.env.*
+*.env.local
+backend/.env
+frontend/.env
+frontend/.env.local
+!.env.example
+!backend/.env.example
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build artifacts
+dist/
+build/
+.vercel/
+
+# Python cache & testing
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# IDE & OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

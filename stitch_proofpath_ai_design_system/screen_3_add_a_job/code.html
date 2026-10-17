@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "outline": "#74777f",
+          "secondary-fixed": "#d3e3ff",
+          "error-container": "#ffdad6",
+          "on-error": "#ffffff",
+          "on-tertiary-fixed": "#001e2e",
+          "surface-container": "#eceef0",
+          "on-secondary-fixed-variant": "#004883",
+          "primary-fixed-dim": "#b0c8f1",
+          "on-error-container": "#93000a",
+          "outline-variant": "#c4c6cf",
+          "tertiary": "#001a28",
+          "surface-tint": "#485f83",
+          "on-primary-container": "#7e95bc",
+          "surface-dim": "#d8dadc",
+          "tertiary-fixed-dim": "#92cef6",
+          "secondary-container": "#8abbff",
+          "on-tertiary-fixed-variant": "#004c6c",
+          "tertiary-fixed": "#c7e7ff",
+          "primary-fixed": "#d5e3ff",
+          "surface-bright": "#f7f9fb",
+          "on-background": "#191c1e",
+          "on-surface-variant": "#44474e",
+          "on-surface": "#191c1e",
+          "on-secondary": "#ffffff",
+          "on-primary": "#ffffff",
+          "surface": "#f7f9fb",
+          "tertiary-container": "#003046",
+          "on-primary-fixed-variant": "#30476a",
+          "secondary-fixed-dim": "#a3c9ff",
+          "inverse-primary": "#b0c8f1",
+          "on-tertiary-container": "#5e9ac0",
+          "inverse-on-surface": "#eff1f3",
+          "primary": "#001835",
+          "surface-variant": "#e0e3e5",
+          "on-primary-fixed": "#001b3b",
+          "on-secondary-fixed": "#001c39",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-container": "#004a87",
+          "on-tertiary": "#ffffff",
+          "surface-container-low": "#f2f4f6",
+          "secondary": "#27609e",
+          "error": "#ba1a1a",
+          "primary-container": "#142d4e",
+          "surface-container-highest": "#e0e3e5",
+          "surface-container-high": "#e6e8ea",
+          "inverse-surface": "#2d3133",
+          "background": "#f7f9fb"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter-desktop": "1.5rem",
+          "margin": "1rem",
+          "gutter": "1rem",
+          "margin-desktop": "3rem",
+          "space-lg": "1.5rem",
+          "space-xs": "0.25rem",
+          "margin-tablet": "2rem",
+          "space-xl": "2rem",
+          "space-md": "1rem",
+          "space-sm": "0.5rem"
+        },
+        "fontFamily": {
+          "body-md": ["Geist"],
+          "body-sm": ["Geist"],
+          "body-lg": ["Geist"],
+          "headline-md": ["Geist"],
+          "label-sm": ["JetBrains Mono"],
+          "display-mobile": ["Geist"],
+          "code-inline": ["JetBrains Mono"],
+          "label-md": ["JetBrains Mono"],
+          "headline-lg": ["Geist"],
+          "headline-lg-mobile": ["Geist"],
+          "display": ["Geist"],
+          "headline-sm": ["Geist"]
+        },
+        "fontSize": {
+          "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "body-sm": ["12px", {"lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400"}],
+          "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "headline-md": ["20px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+          "display-mobile": ["30px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+          "code-inline": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
+          "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+          "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+          "headline-lg-mobile": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+          "headline-sm": ["16px", {"lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600"}]
+        }
+      }
+    }
+  };</script></head><body class="bg-background font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant"><div class="h-14 max-w-7xl mx-auto px-gutter-desktop flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold">ProofPath AI</span></div><nav class="flex items-center gap-space-lg text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors pb-4 pt-4" href="#">1. GitHub Portfolio</a><a class="text-on-surface-variant hover:text-on-surface transition-colors pb-4 pt-4" href="#">2. Repositories</a><a aria-current="page" class="transition-colors text-secondary border-b-2 border-secondary font-medium pb-4 pt-4" href="#">3. Job Requirements</a><a class="text-on-surface-variant hover:text-on-surface transition-colors pb-4 pt-4" href="#">4. Skill Assessment</a></nav><div class="flex items-center gap-space-md"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 bg-background min-h-[calc(100vh-56px)]"><div class="flex flex-col w-full">
+<!-- Content Canvas -->
+<div class="w-full max-w-7xl mx-auto px-gutter sm:px-gutter-desktop py-space-xl">
+<!-- Header Protocol Block -->
+<div class="flex flex-col gap-space-xs mb-space-xl"><h1 class="font-headline-lg text-headline-lg text-primary tracking-tight font-semibold">Add a Job</h1><p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Provide a target job description to extract verifiable technical requirements.</p></div>
+<!-- Main Workspace Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Primary Configuration Matrix (Col 1-8) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Tabbed Ingestion Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm flex flex-col overflow-hidden">
+<!-- Segmented Controller Header -->
+<div class="bg-surface-container-low px-space-md pt-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-center bg-surface-container-highest p-1 rounded-lg self-start">
+<button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg text-body-sm font-headline-sm transition-all bg-surface-container-lowest text-primary shadow-sm" id="tab-btn-url" onclick="switchMethod('url')" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">link</span>
+<span class="">Fetch via URL</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg text-body-sm font-headline-sm transition-all text-on-surface-variant hover:text-on-surface" id="tab-btn-text" onclick="switchMethod('text')" type="button">
+<span class="material-symbols-outlined text-[16px]">content_paste</span>
+<span class="">Paste text directly</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant pb-2 sm:pb-0">
+<span class="material-symbols-outlined text-[16px] text-outline">info</span>
+<span class="font-label-sm text-label-sm">Recommended fallback if URL encounters paywalls</span>
+</div>
+</div>
+<!-- Ingestion Panels -->
+<div class="p-space-lg flex flex-col gap-space-lg">
+<!-- Panel A: Public URL -->
+<div class="flex flex-col gap-space-md" id="panel-url"><div class="flex flex-col gap-space-xs"><label class="font-headline-sm text-headline-sm text-primary" for="job-url-input">Job Posting URL</label><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">link</span><input class="w-full bg-surface-container-lowest pl-10 pr-space-md py-2.5 rounded-lg font-code-inline text-code-inline text-primary placeholder:text-outline-variant outline-none focus:ring-2 focus:ring-secondary-fixed transition-all border border-outline-variant" id="job-url-input" placeholder="e.g. https://company.com/careers/software-engineer" type="url"></div><p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Provide a direct public job listing URL or paste the job description text.</p></div></div>
+<!-- Panel B: Direct Paste (Hidden by default) -->
+<div class="hidden flex-col gap-space-md" id="panel-text">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-headline-sm text-headline-sm text-primary" for="job-raw-textarea">Raw Job Specification</label>
+<span class="font-label-sm text-label-sm text-outline" id="char-counter">0 characters</span>
+</div>
+<textarea class="w-full bg-surface-container-lowest p-space-md rounded-lg font-code-inline text-code-inline text-primary placeholder:text-outline-variant outline-none focus:ring-2 focus:ring-secondary-fixed resize-y transition-all" id="job-raw-textarea" oninput="updateCharCount(this)" placeholder="Paste raw job title, qualifications, and role description here..." rows="12"></textarea>
+<div class="flex items-center justify-between text-on-surface-variant mt-1">
+<span class="font-body-sm text-body-sm">Retains whitespace, lists, and hierarchical role parameters intact.</span>
+<button class="font-label-sm text-label-sm text-secondary hover:text-on-secondary-fixed-variant" onclick="clearTextarea()" type="button">Clear text</button>
+</div>
+</div>
+</div>
+<!-- Notice / Error State Banner (Toggleable demonstration) -->
+
+<!-- Action Ribbon -->
+<div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-lowest">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">memory</span>
+<span class="font-label-sm text-label-sm">Parser: ProofPath Strict Extraction Engine v2.4</span>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="w-full sm:w-auto flex items-center justify-center gap-space-xs px-space-lg py-2.5 rounded-lg font-headline-sm text-headline-sm bg-secondary text-on-secondary hover:bg-on-secondary-fixed-variant transition-colors shadow-sm" onclick="simulateExtraction()" type="button">
+<span class="material-symbols-outlined text-[18px]">rule_folder</span>
+<span class="">Extract requirements</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Architectural Processing Specifications -->
+
+</div>
+<!-- Right Rail: Provenance & Audit Ledger (Col 9-12) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg"><div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md border border-outline-variant"><div class="flex items-center gap-space-xs text-primary"><span class="material-symbols-outlined text-[20px] text-secondary">psychology</span><h2 class="font-headline-sm text-headline-sm font-semibold">Extraction Process</h2></div><p class="font-body-sm text-body-sm text-on-surface-variant">ProofPath analyzes the role requirements to construct a verifiable technical benchmark for repository cross-referencing.</p><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5">check_circle</span><span class="">Extracts explicit technical skills, languages, frameworks, and architecture criteria directly from the posting text.</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5">check_circle</span><span class="">Omits non-technical boilerplate, legal disclaimers, and generalized soft-skill statements.</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5">check_circle</span><span class="">Maps required technical competencies directly against your verified codebase evidence.</span></li></ul><div class="p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm flex items-start gap-2 mt-2"><span class="material-symbols-outlined text-[18px] text-secondary shrink-0">info</span><span class="">If the target URL is behind a login or anti-bot shield, switch to the direct paste tab.</span></div></div></div>
+</div>
+</div>
+</div>
+<script>
+  function switchMethod(method) {
+    const btnUrl = document.getElementById('tab-btn-url');
+    const btnText = document.getElementById('tab-btn-text');
+    const panelUrl = document.getElementById('panel-url');
+    const panelText = document.getElementById('panel-text');
+    const badge = document.getElementById('provenance-origin-badge');
+
+    if (method === 'url') {
+      btnUrl.className = "flex items-center gap-space-xs px-space-md py-1.5 rounded-lg text-body-sm font-headline-sm transition-all bg-surface-container-lowest text-primary shadow-sm";
+      btnText.className = "flex items-center gap-space-xs px-space-md py-1.5 rounded-lg text-body-sm font-headline-sm transition-all text-on-surface-variant hover:text-on-surface";
+      panelUrl.classList.remove('hidden');
+      panelUrl.classList.add('flex');
+      panelText.classList.add('hidden');
+      panelText.classList.remove('flex');
+      
+      const val = document.getElementById('job-url-input').value.trim();
+      badge.textContent = val ? `URL: ${val.substring(0, 24)}...` : 'URL Endpoint (Awaiting submission)';
+    } else {
+      btnText.className = "flex items-center gap-space-xs px-space-md py-1.5 rounded-lg text-body-sm font-headline-sm transition-all bg-surface-container-lowest text-primary shadow-sm";
+      btnUrl.className = "flex items-center gap-space-xs px-space-md py-1.5 rounded-lg text-body-sm font-headline-sm transition-all text-on-surface-variant hover:text-on-surface";
+      panelText.classList.remove('hidden');
+      panelText.classList.add('flex');
+      panelUrl.classList.add('hidden');
+      panelUrl.classList.remove('flex');
+
+      const text = document.getElementById('job-raw-textarea').value.trim();
+      badge.textContent = text ? `Direct Paste (${text.length} chars)` : 'Manual Paste (Awaiting submission)';
+    }
+  }
+
+  function updateCharCount(el) {
+    const counter = document.getElementById('char-counter');
+    const badge = document.getElementById('provenance-origin-badge');
+    const length = el.value.length;
+    counter.textContent = `${length.toLocaleString()} characters`;
+    if (length > 0) {
+      badge.textContent = `Direct Paste (${length.toLocaleString()} chars)`;
+    } else {
+      badge.textContent = 'Manual Paste (Awaiting submission)';
+    }
+  }
+
+  function clearTextarea() {
+    const el = document.getElementById('job-raw-textarea');
+    el.value = '';
+    updateCharCount(el);
+    el.focus();
+  }
+
+  function focusTextarea() {
+    setTimeout(() => {
+      const textarea = document.getElementById('job-raw-textarea');
+      if (textarea) textarea.focus();
+    }, 50);
+  }
+
+  function dismissError() {
+    const el = document.getElementById('fetch-error-state');
+    el.classList.add('hidden');
+  }
+
+  function toggleErrorDemo() {
+    const el = document.getElementById('fetch-error-state');
+    el.classList.toggle('hidden');
+  }
+
+  function retryFetch() {
+    const input = document.getElementById('job-url-input');
+    input.focus();
+    const originalPlaceholder = input.placeholder;
+    input.placeholder = "Retrying connection protocol...";
+    setTimeout(() => {
+      input.placeholder = originalPlaceholder;
+    }, 1200);
+  }
+
+  function simulateExtraction() {
+    const now = new Date();
+    document.getElementById('audit-timestamp').textContent = now.toISOString().substring(11, 19) + ' UTC';
+    const isUrlVisible = !document.getElementById('panel-url').classList.contains('hidden');
+    const badge = document.getElementById('provenance-origin-badge');
+    
+    if (isUrlVisible) {
+      const val = document.getElementById('job-url-input').value.trim();
+      if (!val) {
+        document.getElementById('fetch-error-state').classList.remove('hidden');
+        badge.textContent = 'Failed: Empty URL';
+      } else {
+        badge.textContent = `Captured URL: ${val.replace(/^https?:\/\//, '').substring(0, 20)}...`;
+      }
+    } else {
+      const text = document.getElementById('job-raw-textarea').value.trim();
+      if (!text) {
+        alert("Please input role specifications in the text area before extracting.");
+        badge.textContent = 'Failed: Empty Paste';
+      } else {
+        badge.textContent = `Captured Raw Text: ${text.length} bytes`;
+      }
+    }
+  }
+
+  // Set real initial clock
+  (function initClock() {
+    const now = new Date();
+    const timeStr = now.toISOString().substring(11, 19) + ' UTC';
+    const auditEl = document.getElementById('audit-timestamp');
+    if (auditEl) auditEl.textContent = timeStr;
+  })();
+</script></main>
+
+</body></html>

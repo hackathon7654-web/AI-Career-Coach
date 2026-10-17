@@ -1,0 +1,34 @@
+# ProofPath AI Backend Dependencies
+# Pinned to verified compatible versions in environment
+
+# Framework & Server
+fastapi==0.141.1
+uvicorn[standard]==0.52.4
+starlette==1.6.0
+python-multipart==0.0.32
+
+# Settings & Validation
+pydantic==2.13.5
+pydantic-settings==2.15.0
+
+# HTTP & Web Scraping
+httpx==0.28.1
+beautifulsoup4==4.14.3
+
+# Database & Storage (Phase 3C)
+supabase==2.31.0
+postgrest==2.31.0
+psycopg==3.3.6
+psycopg-binary==3.3.6
+SQLAlchemy==2.0.50
+alembic==1.20.0
+
+# Security & Utilities
+cryptography==48.0.0
+PyJWT==2.13.0
+python-dotenv==1.2.3
+slowapi==0.1.10
+
+# Testing (Development)
+pytest==9.1.1
+pytest-asyncio==1.4.0

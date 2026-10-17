@@ -1,0 +1,570 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-fixed-variant": "#004883",
+          "surface-bright": "#f7f9fb",
+          "on-secondary-fixed": "#001c39",
+          "secondary": "#27609e",
+          "secondary-container": "#8abbff",
+          "on-background": "#191c1e",
+          "tertiary": "#001a28",
+          "tertiary-fixed": "#c7e7ff",
+          "inverse-on-surface": "#eff1f3",
+          "outline-variant": "#c4c6cf",
+          "inverse-surface": "#2d3133",
+          "primary": "#001835",
+          "on-tertiary": "#ffffff",
+          "on-tertiary-fixed-variant": "#004c6c",
+          "background": "#f7f9fb",
+          "on-surface-variant": "#44474e",
+          "secondary-fixed-dim": "#a3c9ff",
+          "primary-fixed-dim": "#b0c8f1",
+          "surface-container-lowest": "#ffffff",
+          "surface": "#f7f9fb",
+          "surface-container-highest": "#e0e3e5",
+          "on-surface": "#191c1e",
+          "on-tertiary-container": "#5e9ac0",
+          "on-secondary": "#ffffff",
+          "on-tertiary-fixed": "#001e2e",
+          "surface-dim": "#d8dadc",
+          "surface-container-high": "#e6e8ea",
+          "on-primary-fixed": "#001b3b",
+          "on-primary-fixed-variant": "#30476a",
+          "on-primary": "#ffffff",
+          "error": "#ba1a1a",
+          "inverse-primary": "#b0c8f1",
+          "tertiary-fixed-dim": "#92cef6",
+          "surface-variant": "#e0e3e5",
+          "outline": "#74777f",
+          "primary-fixed": "#d5e3ff",
+          "on-error": "#ffffff",
+          "secondary-fixed": "#d3e3ff",
+          "on-primary-container": "#7e95bc",
+          "tertiary-container": "#003046",
+          "surface-container": "#eceef0",
+          "error-container": "#ffdad6",
+          "on-secondary-container": "#004a87",
+          "primary-container": "#142d4e",
+          "surface-container-low": "#f2f4f6",
+          "surface-tint": "#485f83",
+          "on-error-container": "#93000a"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter": "1rem",
+          "space-lg": "1.5rem",
+          "space-xl": "2rem",
+          "space-sm": "0.5rem",
+          "margin-tablet": "2rem",
+          "space-xs": "0.25rem",
+          "space-md": "1rem",
+          "gutter-desktop": "1.5rem",
+          "margin-desktop": "3rem",
+          "margin": "1rem"
+        },
+        "fontFamily": {
+          "body-md": [
+            "Geist"
+          ],
+          "headline-md": [
+            "Geist"
+          ],
+          "headline-lg": [
+            "Geist"
+          ],
+          "body-lg": [
+            "Geist"
+          ],
+          "code-inline": [
+            "JetBrains Mono"
+          ],
+          "body-sm": [
+            "Geist"
+          ],
+          "display-mobile": [
+            "Geist"
+          ],
+          "headline-sm": [
+            "Geist"
+          ],
+          "label-sm": [
+            "JetBrains Mono"
+          ],
+          "headline-lg-mobile": [
+            "Geist"
+          ],
+          "label-md": [
+            "JetBrains Mono"
+          ],
+          "display": [
+            "Geist"
+          ]
+        },
+        "fontSize": {
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "26px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "code-inline": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-mobile": [
+            "30px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg-mobile": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "display": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant/30"><div class="h-16 max-w-7xl mx-auto px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md text-primary-container tracking-tight">ProofPath AI</span></div><div class="h-4 w-px bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-xs text-on-surface-variant font-code-inline text-code-inline"><span class="text-secondary font-medium">Step 4:</span><span class="">Skill Assessment</span></div></div><div class="flex items-center gap-space-lg"><nav class="flex items-center gap-space-lg" data-active-classes="text-primary font-medium border-b-2 border-secondary pb-4 -mb-4"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">1. GitHub Portfolio</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">2. Repositories</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">3. Job Requirements</a><a class="font-body-md text-body-md text-primary font-medium border-b-2 border-secondary pb-4 -mb-4 transition-colors" href="#">4. Skill Assessment</a></nav><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface max-w-7xl mx-auto px-margin-desktop min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full py-space-lg space-y-space-lg text-on-surface">
+<!-- Top Navigation & Path Audit Breadcrumb -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant flex-wrap"><a class="hover:text-secondary transition-colors" href="#">Skill Assessment</a><span class="text-outline">&gt;</span><a class="hover:text-secondary transition-colors" href="#">Event-Driven Architecture</a><span class="text-outline">&gt;</span><span class="text-primary font-medium bg-surface-container px-space-xs py-0.5 rounded">Evidence Inspection</span></div><a class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary hover:underline w-fit" href="#"><span class="material-symbols-outlined text-[16px]">arrow_back</span><span class="">Back to Skill-Gap Assessment</span></a></div>
+<!-- Quick Provenance Pill -->
+
+</div>
+<!-- Screen Heading -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Repository Evidence Details</h1>
+<span class="bg-surface-container-high text-on-surface px-space-xs py-0.5 rounded font-code-inline text-code-inline">PROV-AUDIT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+      Deep inspection, static syntax provenance, and cryptographic commit verification for candidate capability claims.
+    </p>
+</div>
+<!-- Primary Evidence Summary Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg relative overflow-hidden">
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-lg">
+<div class="space-y-space-sm max-w-3xl">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="bg-surface-container px-space-sm py-1 rounded font-label-sm text-label-sm text-on-surface-variant">
+            Backend Infrastructure &amp; Messaging
+          </span>
+<span class="inline-flex items-center gap-1 bg-surface-container-low px-space-sm py-1 rounded font-code-inline text-code-inline text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified_user</span>
+            Static AST Validated
+          </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">
+          Event-Driven Message Consumers (RabbitMQ / AMQP)
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Mapped from target qualification: <span class="font-medium text-primary">“Experience building microservices with message queues (RabbitMQ, Kafka, or SQS)”</span>
+</p>
+</div>
+<!-- Evidence Status Indicator -->
+<div class="flex flex-col lg:items-end gap-space-xs shrink-0">
+<div class="inline-flex items-center gap-space-xs bg-surface-container px-space-md py-space-xs rounded-full" style="background-color: rgb(255, 243, 214);"><span class="w-2.5 h-2.5 rounded-full" style="background-color: rgb(133, 85, 0);"></span><span class="font-headline-sm text-headline-sm font-medium" style="color: rgb(133, 85, 0);">Partially demonstrated</span></div>
+<span class="font-code-inline text-code-inline text-on-surface-variant text-right">
+          Indexed Oct 24, 2024 · 14:32:08 UTC
+        </span>
+</div>
+</div>
+</div>
+<!-- Main Technical Dossier (Split 2-Column Desktop Grid) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Source Provenance & Code Excerpt (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col space-y-space-lg min-w-0">
+<!-- Metadata & Provenance Key-Value Box -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md space-y-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low -mx-space-md -mt-space-md px-space-md py-space-xs rounded-t-xl">
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">folder_data</span>
+            Source Provenance Record
+          </span>
+
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-space-lg gap-y-space-sm font-body-sm text-body-sm">
+<!-- Repo -->
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Repository Identity</span>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">terminal</span>
+<a class="font-code-inline text-code-inline text-secondary font-medium hover:underline inline-flex items-center gap-0.5" href="https://github.com/alexander-dev/task-orchestrator" rel="noopener noreferrer" target="_blank">
+                alexander-dev/task-orchestrator
+                <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Commit SHA -->
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Analyzed Tree Commit</span>
+<div class="flex items-center gap-space-xs">
+<span class="font-code-inline text-code-inline text-primary bg-surface-container px-1.5 py-0.5 rounded font-semibold" id="sha-display">
+                7f4c9a2
+              </span>
+<button class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" onclick="navigator.clipboard.writeText('7f4c9a2d8e0114b3d88194cf219d1e44a30e8c12'); this.innerText='Copied!';">
+                Copy Full SHA
+              </button>
+</div>
+</div>
+<!-- File Path -->
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">File Location</span>
+<div class="flex items-center gap-1 font-code-inline text-code-inline text-primary truncate">
+<span class="text-on-surface-variant">internal</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface-variant">consumer</span>
+<span class="text-outline">/</span>
+<span class="font-semibold text-primary">order_events.go</span>
+</div>
+</div>
+<!-- Line Coverage -->
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Analyzed Segment</span>
+<div class="flex items-center gap-space-xs font-code-inline text-code-inline text-primary">
+<span class="font-semibold">Lines 42–68</span>
+<span class="text-on-surface-variant">(27 executable lines analyzed)</span>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm font-code-inline text-code-inline text-on-surface-variant">
+<span class="">Lang: <strong class="text-primary">Go 1.22</strong></span>
+<span class="">·</span>
+<span class="">Size: <strong class="text-primary">3.2 KB</strong></span>
+<span class="">·</span>
+<span class="text-secondary font-medium">Scanned under 500KB threshold</span>
+</div>
+<a class="inline-flex items-center gap-1 bg-surface-container-lowest text-secondary px-space-sm py-1 rounded font-body-sm text-body-sm font-medium hover:bg-surface-container transition-colors shadow-sm" href="https://github.com/alexander-dev/task-orchestrator/blob/7f4c9a2d8e0114b3d88194cf219d1e44a30e8c12/internal/consumer/order_events.go#L42-L68" rel="noopener noreferrer" target="_blank">
+<span class="">View file at commit 7f4c9a2</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Safe Code Excerpt Viewer -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Security Attestation Bar -->
+
+<!-- Code Terminal Bar -->
+<div class="bg-primary px-space-md py-2.5 flex items-center justify-between text-on-primary">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5 opacity-60">
+<span class="w-2.5 h-2.5 rounded-full bg-on-primary/30"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-on-primary/30"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-on-primary/30"></span>
+</div>
+<span class="font-code-inline text-code-inline font-medium tracking-tight">order_events.go · Lines 42–68</span>
+</div>
+<button class="flex items-center gap-1 font-code-inline text-label-sm text-primary-fixed hover:text-on-primary transition-colors" id="copy-code-btn" onclick="copySnippet();">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span id="copy-btn-label" class="">Copy excerpt</span>
+</button>
+</div>
+<!-- Code Block with Precise Line Numbers -->
+<div class="bg-primary-container p-space-md overflow-x-auto text-on-primary">
+<pre class="font-code-inline text-code-inline leading-[22px] flex"><span class="select-none text-on-primary-container pr-space-md text-right font-code-inline" style="user-select: none;">42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</span>
+<code class="text-surface font-code-inline"><span class="text-primary-fixed-dim font-semibold">func</span> (c *OrderConsumer) <span class="text-secondary-fixed">Start</span>(ctx context.Context) <span class="text-primary-fixed-dim">error</span> {
+	msgs, err := c.channel.<span class="text-secondary-fixed">Consume</span>(
+		c.queueName,
+		<span class="text-tertiary-fixed">"order-worker-1"</span>,
+		<span class="text-secondary-fixed-dim">false</span>, <span class="text-on-primary-container">// manual ack required for delivery guarantees</span>
+		<span class="text-secondary-fixed-dim">false</span>,
+		<span class="text-secondary-fixed-dim">false</span>,
+		<span class="text-secondary-fixed-dim">false</span>,
+		<span class="text-secondary-fixed-dim">nil</span>,
+	)
+	<span class="text-primary-fixed-dim font-semibold">if</span> err != <span class="text-secondary-fixed-dim">nil</span> {
+		<span class="text-primary-fixed-dim font-semibold">return</span> fmt.<span class="text-secondary-fixed">Errorf</span>(<span class="text-tertiary-fixed">"failed to register amqp consumer: %w"</span>, err)
+	}
+
+	<span class="text-primary-fixed-dim font-semibold">go</span> <span class="text-primary-fixed-dim font-semibold">func</span>() {
+		<span class="text-primary-fixed-dim font-semibold">for</span> {
+			<span class="text-primary-fixed-dim font-semibold">select</span> {
+			<span class="text-primary-fixed-dim font-semibold">case</span> &lt;-ctx.<span class="text-secondary-fixed">Done</span>():
+				c.logger.<span class="text-secondary-fixed">Info</span>(<span class="text-tertiary-fixed">"stopping consumer loop"</span>, zap.<span class="text-secondary-fixed">Error</span>(ctx.<span class="text-secondary-fixed">Err</span>()))
+				<span class="text-primary-fixed-dim font-semibold">return</span>
+			<span class="text-primary-fixed-dim font-semibold">case</span> d, ok := &lt;-msgs:
+				<span class="text-primary-fixed-dim font-semibold">if</span> !ok {
+					c.logger.<span class="text-secondary-fixed">Warn</span>(<span class="text-tertiary-fixed">"amqp delivery channel closed"</span>)
+					<span class="text-primary-fixed-dim font-semibold">return</span>
+				}
+				c.<span class="text-secondary-fixed">handleDelivery</span>(ctx, d)
+			}
+		}
+	}()
+	<span class="text-primary-fixed-dim font-semibold">return</span> <span class="text-secondary-fixed-dim">nil</span>
+}</code>
+          </pre>
+</div>
+<div class="bg-surface-container-lowest p-space-sm flex items-center justify-between text-on-surface-variant font-code-inline text-label-sm">
+<span class="">Lexer: tree-sitter-go</span>
+<span class="">Zero external runtime dependency telemetry collected</span>
+</div>
+</div>
+<!-- Evidence Rationale & Skill Claim Analysis -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">psychology</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Evidence Analysis &amp; Technical Rationale</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          ProofPath AI parsed this code block directly into a concrete control-flow tree. The excerpt validates the following architectural patterns without speculative inference:
+        </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Point 1 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between space-y-space-xs">
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase">Resilient Delivery Pattern</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Explicit Channel Acknowledgement</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                The invocation disables auto-acknowledgement (<code class="font-code-inline text-code-inline bg-surface px-1 py-0.5 rounded text-primary">autoAck: false</code> at line 46), verifying that message consumption delegates acknowledgement to an explicit processing handler.
+              </p>
+</div>
+<div class="pt-space-xs font-code-inline text-label-sm text-on-surface-variant">
+              Pattern: AMQP Manual Acknowledgement
+            </div>
+</div>
+<!-- Point 2 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between space-y-space-xs">
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase">Lifecycle Hygiene</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Context-Aware Graceful Termination</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                The background goroutine explicitly selects over <code class="font-code-inline text-code-inline bg-surface px-1 py-0.5 rounded text-primary">&lt;-ctx.Done()</code> (lines 58–61), establishing structured termination on system signal dispatch before closing the consumer loop.
+              </p>
+</div>
+<div class="pt-space-xs font-code-inline text-label-sm text-on-surface-variant">
+              Pattern: Goroutine Cancellation Context
+            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Rigorous Limitations, Integrity Checklist & Actions (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col space-y-space-lg">
+<!-- Critical Principle: Limitations & Boundary Conditions -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">gavel</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Observed Limitations &amp; Missing Context</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          In alignment with ProofPath AI’s strict zero-hallucination standard, this assessment does not claim competencies outside the scanned static boundaries.
+        </p>
+<div class="space-y-space-sm pt-space-xs">
+<!-- Limitation Item 1 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px] text-secondary">info</span>
+<span class="">Scope: Retries &amp; DLX Not Verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              The excerpt demonstrates subscription setup, but Dead Letter Exchange (DLX) forwarding and exponential backoff retry logic are absent from this file.
+            </p>
+</div>
+<!-- Limitation Item 2 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px] text-secondary">folder_off</span>
+<span class="">Topology Setup Not in Root</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Queue/exchange declarations (<code class="font-code-inline text-code-inline text-primary">QueueDeclare</code>) were not indexed in this repository tree; pre-existing broker configuration is assumed.
+            </p>
+</div>
+<!-- Limitation Item 3 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px] text-secondary">speed</span>
+<span class="">Zero Performance / Production Claims</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Static AST inspection cannot verify actual throughput, message durability in flight, or production broker reliability.
+            </p>
+</div>
+</div>
+</div>
+<!-- Verification Audit Actions -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg space-y-space-md">
+<h3 class="font-headline-sm text-headline-sm text-primary">Provenance &amp; Portfolio Actions</h3>
+<div class="space-y-space-sm">
+
+<a class="w-full bg-surface-container-low hover:bg-surface-container text-primary py-2.5 px-space-md rounded-xl font-body-md text-body-md font-medium transition-colors flex items-center justify-center gap-space-xs" href="https://github.com/alexander-dev/task-orchestrator/commit/7f4c9a2d8e0114b3d88194cf219d1e44a30e8c12" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">open_in_browser</span>
+<span class="">Open in GitHub at Commit 7f4c9a2</span>
+</a>
+<button class="w-full bg-transparent hover:bg-surface-container text-on-surface-variant hover:text-primary py-2 px-space-md rounded-xl font-body-sm text-body-sm transition-colors flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+<span class="">Flag Ambiguity / Request AST Rescan</span>
+</button>
+</div>
+<div class="pt-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0 mt-0.5">policy</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+              ProofPath AI citations strictly reference immutable repository trees. No simulated scores or synthetic claims are ever stored.
+            </p>
+</div>
+</div>
+</div>
+<!-- Verification Checkpoint Metadata Box -->
+
+</div>
+</div>
+</div>
+<script>
+  function copySnippet() {
+    const rawCode = `func (c *OrderConsumer) Start(ctx context.Context) error {
+	msgs, err := c.channel.Consume(
+		c.queueName,
+		"order-worker-1",
+		false, // manual ack required for delivery guarantees
+		false,
+		false,
+		false,
+		nil,
+	)
+	if err != nil {
+		return fmt.Errorf("failed to register amqp consumer: %w", err)
+	}
+
+	go func() {
+		for {
+			select {
+			case <-ctx.Done():
+				c.logger.Info("stopping consumer loop", zap.Error(ctx.Err()))
+				return
+			case d, ok := <-msgs:
+				if !ok {
+					c.logger.Warn("amqp delivery channel closed")
+					return
+				}
+				c.handleDelivery(ctx, d)
+			}
+		}
+	}()
+	return nil
+}`;
+    navigator.clipboard.writeText(rawCode).then(() => {
+      const label = document.getElementById('copy-btn-label');
+      if (label) {
+        label.innerText = 'Copied!';
+        setTimeout(() => {
+          label.innerText = 'Copy excerpt';
+        }, 2000);
+      }
+    });
+  }
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-md"><div class="max-w-7xl mx-auto px-margin-desktop flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm"><span class="font-code-inline text-code-inline">ProofPath AI · Precision Career Engineering</span><div class="flex items-center gap-space-lg font-code-inline text-code-inline"><span class="">System Status: Operational</span></div></div></footer>
+
+</body></html>

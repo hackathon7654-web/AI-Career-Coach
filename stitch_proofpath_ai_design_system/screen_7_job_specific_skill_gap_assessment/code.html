@@ -1,0 +1,751 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-fixed-variant": "#004883",
+          "surface-bright": "#f7f9fb",
+          "on-secondary-fixed": "#001c39",
+          "secondary": "#27609e",
+          "secondary-container": "#8abbff",
+          "on-background": "#191c1e",
+          "tertiary": "#001a28",
+          "tertiary-fixed": "#c7e7ff",
+          "inverse-on-surface": "#eff1f3",
+          "outline-variant": "#c4c6cf",
+          "inverse-surface": "#2d3133",
+          "primary": "#001835",
+          "on-tertiary": "#ffffff",
+          "on-tertiary-fixed-variant": "#004c6c",
+          "background": "#f7f9fb",
+          "on-surface-variant": "#44474e",
+          "secondary-fixed-dim": "#a3c9ff",
+          "primary-fixed-dim": "#b0c8f1",
+          "surface-container-lowest": "#ffffff",
+          "surface": "#f7f9fb",
+          "surface-container-highest": "#e0e3e5",
+          "on-surface": "#191c1e",
+          "on-tertiary-container": "#5e9ac0",
+          "on-secondary": "#ffffff",
+          "on-tertiary-fixed": "#001e2e",
+          "surface-dim": "#d8dadc",
+          "surface-container-high": "#e6e8ea",
+          "on-primary-fixed": "#001b3b",
+          "on-primary-fixed-variant": "#30476a",
+          "on-primary": "#ffffff",
+          "error": "#ba1a1a",
+          "inverse-primary": "#b0c8f1",
+          "tertiary-fixed-dim": "#92cef6",
+          "surface-variant": "#e0e3e5",
+          "outline": "#74777f",
+          "primary-fixed": "#d5e3ff",
+          "on-error": "#ffffff",
+          "secondary-fixed": "#d3e3ff",
+          "on-primary-container": "#7e95bc",
+          "tertiary-container": "#003046",
+          "surface-container": "#eceef0",
+          "error-container": "#ffdad6",
+          "on-secondary-container": "#004a87",
+          "primary-container": "#142d4e",
+          "surface-container-low": "#f2f4f6",
+          "surface-tint": "#485f83",
+          "on-error-container": "#93000a"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter": "1rem",
+          "space-lg": "1.5rem",
+          "space-xl": "2rem",
+          "space-sm": "0.5rem",
+          "margin-tablet": "2rem",
+          "space-xs": "0.25rem",
+          "space-md": "1rem",
+          "gutter-desktop": "1.5rem",
+          "margin-desktop": "3rem",
+          "margin": "1rem"
+        },
+        "fontFamily": {
+          "body-md": [
+            "Geist"
+          ],
+          "headline-md": [
+            "Geist"
+          ],
+          "headline-lg": [
+            "Geist"
+          ],
+          "body-lg": [
+            "Geist"
+          ],
+          "code-inline": [
+            "JetBrains Mono"
+          ],
+          "body-sm": [
+            "Geist"
+          ],
+          "display-mobile": [
+            "Geist"
+          ],
+          "headline-sm": [
+            "Geist"
+          ],
+          "label-sm": [
+            "JetBrains Mono"
+          ],
+          "headline-lg-mobile": [
+            "Geist"
+          ],
+          "label-md": [
+            "JetBrains Mono"
+          ],
+          "display": [
+            "Geist"
+          ]
+        },
+        "fontSize": {
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "26px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "code-inline": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-mobile": [
+            "30px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg-mobile": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "display": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant/30"><div class="h-16 max-w-7xl mx-auto px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md text-primary-container tracking-tight">ProofPath AI</span></div><div class="h-4 w-px bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-xs text-on-surface-variant font-code-inline text-code-inline"><span class="text-secondary font-medium">Step 4:</span><span class="">Skill Assessment</span></div></div><div class="flex items-center gap-space-lg"><nav class="flex items-center gap-space-lg"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">1. GitHub Portfolio</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">2. Repositories</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">3. Job Requirements</a><a class="font-body-md text-body-md text-primary font-semibold border-b-2 border-secondary pb-4 -mb-4 transition-colors" href="#">4. Skill Assessment</a></nav><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface max-w-7xl mx-auto px-margin-desktop min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full pb-space-xl">
+<!-- Contextual Breadcrumb Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pt-space-lg pb-space-md border-b border-outline-variant/30">
+<div class="flex flex-wrap items-center gap-space-xs font-code-inline text-code-inline text-on-surface-variant">
+<span class="text-secondary font-medium">Target Job:</span>
+<span class="text-primary-container font-semibold">Staff Backend Engineer</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface">Applied Systems</span>
+<span class="text-outline mx-1">•</span>
+<span class="inline-flex items-center gap-1 text-on-surface-variant/80">
+<span class="material-symbols-outlined text-[14px]">link</span>
+<span class="underline decoration-outline-variant">careers.appliedsystems.com/jobs/4819</span>
+<span class="text-xs text-outline">(Extracted 2h ago)</span>
+</span>
+</div>
+
+</div>
+<!-- Page Header & Methodological Clarification -->
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-lg pt-space-lg pb-space-lg">
+<div class="space-y-space-xs max-w-4xl">
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-primary-container tracking-tight">Job-Specific Skill-Gap Assessment</h1>
+<span class="px-2 py-0.5 rounded bg-primary-container/10 text-primary-container font-label-sm text-label-sm font-semibold uppercase tracking-wider">Deterministic AST</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Evaluates extracted job requirements strictly against verified AST parsing, commit history, and test implementations across 4 scanned repositories. No predictive scoring, subjective rankings, or simulated competencies.
+      </p>
+</div>
+<!-- Top Action / Evidence Export -->
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-space-xs px-3.5 py-2 rounded bg-surface-container-lowest text-primary-container border border-outline-variant font-headline-sm text-body-md hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span class="">Re-evaluate Commits</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-3.5 py-2 rounded bg-secondary text-on-secondary font-headline-sm text-body-md hover:bg-on-secondary-fixed-variant transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span class="">Export Evidence Audit (JSON/MD)</span>
+</button>
+</div>
+</div>
+<!-- Scanned Scope Metadata Ribbon -->
+
+<!-- Metric Count Banners (Honest metrics only - no match % or scores) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md mb-space-lg"><!-- Demonstrated -->
+<div class="rounded-lg p-space-md border" style="background-color: rgb(230, 246, 236); border-color: rgba(23, 107, 58, 0.2);">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold" style="color: #176B3A;">Demonstrated</span>
+<span class="w-2.5 h-2.5 rounded-full" style="background-color: #176B3A;"></span>
+</div>
+<div class="mt-2 flex items-baseline gap-1.5">
+<span class="font-display text-display font-bold leading-none" style="color: #176B3A;">4</span>
+<span class="font-body-sm text-body-sm" style="color: #176B3A;">requirements</span>
+</div>
+<div class="mt-1 font-code-inline text-[11px]" style="color: #176B3ACC;">Verified via AST &amp; tests</div>
+</div>
+<!-- Partially demonstrated -->
+<div class="rounded-lg p-space-md border" style="background-color: rgb(255, 243, 214); border-color: rgba(133, 85, 0, 0.2);">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold" style="color: #855500;">Partially demonstrated</span>
+<span class="w-2.5 h-2.5 rounded-full" style="background-color: #855500;"></span>
+</div>
+<div class="mt-2 flex items-baseline gap-1.5">
+<span class="font-display text-display font-bold leading-none" style="color: #855500;">2</span>
+<span class="font-body-sm text-body-sm" style="color: #855500;">requirements</span>
+</div>
+<div class="mt-1 font-code-inline text-[11px]" style="color: #855500CC;">Incomplete scope identified</div>
+</div>
+<!-- Not demonstrated in scanned repositories -->
+<div class="rounded-lg p-space-md border" style="background-color: rgb(253, 232, 232); border-color: rgba(166, 27, 27, 0.2);">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold" style="color: #A61B1B;">Not demonstrated in scanned repositories</span>
+<span class="w-2.5 h-2.5 rounded-full" style="background-color: #A61B1B;"></span>
+</div>
+<div class="mt-2 flex items-baseline gap-1.5">
+<span class="font-display text-display font-bold leading-none" style="color: #A61B1B;">3</span>
+<span class="font-body-sm text-body-sm" style="color: #A61B1B;">requirements</span>
+</div>
+<div class="mt-1 font-code-inline text-[11px]" style="color: #A61B1BCC;">No AST tokens discovered</div>
+</div>
+<!-- Uncertain -->
+<div class="rounded-lg p-space-md border" style="background-color: rgb(237, 233, 254); border-color: rgba(91, 63, 166, 0.2);">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold" style="color: #5B3FA6;">Uncertain</span>
+<span class="w-2.5 h-2.5 rounded-full" style="background-color: #5B3FA6;"></span>
+</div>
+<div class="mt-2 flex items-baseline gap-1.5">
+<span class="font-display text-display font-bold leading-none" style="color: #5B3FA6;">1</span>
+<span class="font-body-sm text-body-sm" style="color: #5B3FA6;">requirement</span>
+</div>
+<div class="mt-1 font-code-inline text-[11px]" style="color: #5B3FA6CC;">Unresolved external modules</div>
+</div></div>
+<!-- Category & Status Filter Tabs -->
+<div class="flex flex-wrap items-center gap-space-xs pb-space-lg"><button class="px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-code-inline text-label-md flex items-center gap-1.5">
+<span class="">All Evaluated Requirements</span>
+<span class="bg-white/20 text-white rounded-full px-1.5 py-0.2 text-[10px]">10</span>
+</button>
+<button class="px-3 py-1.5 rounded-full font-code-inline text-label-md transition-colors flex items-center gap-1.5 border" style="background-color: rgb(230, 246, 236); color: rgb(23, 107, 58); border-color: rgba(23, 107, 58, 0.4);">
+<span class="">Demonstrated</span>
+<span class="rounded-full px-1.5 py-0.2 text-[10px] text-white" style="background-color: #176B3A;">4</span>
+</button>
+<button class="px-3 py-1.5 rounded-full font-code-inline text-label-md transition-colors flex items-center gap-1.5 border" style="background-color: rgb(255, 243, 214); color: rgb(133, 85, 0); border-color: rgba(133, 85, 0, 0.4);">
+<span class="">Partially demonstrated</span>
+<span class="rounded-full px-1.5 py-0.2 text-[10px] text-white" style="background-color: #855500;">2</span>
+</button>
+<button class="px-3 py-1.5 rounded-full font-code-inline text-label-md transition-colors flex items-center gap-1.5 border" style="background-color: rgb(253, 232, 232); color: rgb(166, 27, 27); border-color: rgba(166, 27, 27, 0.4);">
+<span class="">Not demonstrated in scanned repositories</span>
+<span class="rounded-full px-1.5 py-0.2 text-[10px] text-white" style="background-color: #A61B1B;">3</span>
+</button>
+<button class="px-3 py-1.5 rounded-full font-code-inline text-label-md transition-colors flex items-center gap-1.5 border" style="background-color: rgb(237, 233, 254); color: rgb(91, 63, 166); border-color: rgba(91, 63, 166, 0.4);">
+<span class="">Uncertain</span>
+<span class="rounded-full px-1.5 py-0.2 text-[10px] text-white" style="background-color: #5B3FA6;">1</span>
+</button></div>
+<!-- Requirements Assessment List (Detailed Breakdown) -->
+<div class="space-y-space-lg">
+<!-- ITEM 1: Demonstrated -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl overflow-hidden">
+<div class="p-space-lg border-b border-surface-container">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-medium">REQ-01 · CORE INFRASTRUCTURE</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-300 font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px] text-emerald-700">check_circle</span>
+                Demonstrated
+              </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold">
+              Distributed Systems &amp; Event-Driven Architecture (Apache Kafka / RabbitMQ)
+            </h2>
+</div>
+<div class="shrink-0 flex items-center gap-2"><a class="inline-flex items-center gap-1 px-3 py-1 rounded bg-secondary text-on-secondary font-code-inline text-label-sm hover:bg-on-secondary-fixed-variant transition-colors shadow-sm" href="#" data-screen="screen-8"><span class="material-symbols-outlined text-[15px]">code</span><span class="">Inspect supporting code</span></a></div>
+</div>
+<p class="mt-space-md font-body-md text-body-md text-on-surface leading-relaxed">
+          Concrete consumer and producer implementations with idempotent message processing and dead-letter queue handling identified in production service code.
+        </p>
+<!-- Provenance Block -->
+<div class="mt-space-md p-space-md bg-surface-container-low rounded-lg border border-outline-variant/30 font-code-inline text-code-inline space-y-space-sm">
+<div class="flex flex-wrap items-center gap-x-space-lg gap-y-1 text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="text-secondary font-medium">Repository:</span>
+<span class="text-primary font-semibold">acme-corp/order-processing-service</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-secondary font-medium">Ref:</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded text-primary">main @ 7f3a91c</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-secondary font-medium">File:</span>
+<span class="text-primary">internal/messaging/kafka_consumer.go</span>
+<span class="text-on-surface-variant/80 font-normal">[L42–L118]</span>
+</div>
+</div>
+<!-- Code Snippet -->
+<div class="bg-primary text-slate-100 rounded p-space-md overflow-x-auto text-xs leading-relaxed font-code-inline mt-2">
+<pre class="m-0"><code><span class="text-slate-500">42</span>  <span class="text-sky-300">func</span> (c *<span class="text-amber-200">OrderEventConsumer</span>) <span class="text-sky-300">ConsumeClaim</span>(sess sarama.ConsumerGroupSession, claim sarama.ConsumerGroupClaim) <span class="text-sky-300">error</span> {
+<span class="text-slate-500">43</span>      <span class="text-sky-300">for</span> msg := <span class="text-sky-300">range</span> claim.Messages() {
+<span class="text-slate-500">44</span>          ctx, span := tracer.Start(sess.Context(), <span class="text-emerald-300">"process_order_event"</span>)
+<span class="text-slate-500">45</span>          <span class="text-sky-300">if</span> err := c.handleMessageWithRetry(ctx, msg, maxRetries); err != <span class="text-sky-300">nil</span> {
+<span class="text-slate-500">46</span>              c.routeToDeadLetterQueue(ctx, msg, err)
+<span class="text-slate-500">47</span>          }
+<span class="text-slate-500">48</span>          sess.MarkMessage(msg, <span class="text-emerald-300">""</span>)
+<span class="text-slate-500">49</span>          span.End()
+<span class="text-slate-500">50</span>      }
+<span class="text-slate-500">51</span>      <span class="text-sky-300">return</span> <span class="text-sky-300">nil</span>
+<span class="text-slate-500">52</span>  }</code></pre>
+</div>
+</div>
+<!-- Strict Negative Constraints: What Remains Unproven & Scan Limitations -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-md pt-space-sm">
+<div class="bg-surface-container-low/60 rounded p-space-sm border border-outline-variant/30">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-semibold flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px] text-outline">help_outline</span>
+              What remains unproven in scope:
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              High-throughput stress benchmarks, multi-region replication failover testing, and schema registry versioning scripts were not present in scanned repositories.
+            </p>
+</div>
+<div class="bg-surface-container-low/60 rounded p-space-sm border border-outline-variant/30">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-semibold flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px] text-outline">block</span>
+              Scan boundary &amp; limitations:
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Kafka broker configuration and integration test containers reside in external private terraform modules outside scanned scope.
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- ITEM 2: Demonstrated -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl overflow-hidden">
+<div class="p-space-lg">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-medium">REQ-02 · API CONTRACTS &amp; NETWORKING</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-300 font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px] text-emerald-700">check_circle</span>
+                Demonstrated
+              </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold">
+              gRPC &amp; Protocol Buffers API Design
+            </h2>
+</div>
+<div class="shrink-0 flex items-center gap-2"><a class="inline-flex items-center gap-1 px-3 py-1 rounded bg-secondary text-on-secondary font-code-inline text-label-sm hover:bg-on-secondary-fixed-variant transition-colors shadow-sm" href="#" data-screen="screen-8"><span class="material-symbols-outlined text-[15px]">code</span><span class="">Inspect supporting code</span></a></div>
+</div>
+<p class="mt-space-md font-body-md text-body-md text-on-surface leading-relaxed">
+          Full proto3 service definitions and generated Go gRPC streaming server endpoints with custom interceptors for authentication and tracing.
+        </p>
+<!-- Provenance Reference -->
+<div class="mt-space-md p-space-md bg-surface-container-low rounded-lg border border-outline-variant/30 font-code-inline text-code-inline space-y-space-xs">
+<div class="flex flex-wrap items-center gap-x-space-lg gap-y-1 text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="text-secondary font-medium">Repository:</span>
+<span class="text-primary font-semibold">acme-corp/telemetry-gateway</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-secondary font-medium">Ref:</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded text-primary">main @ 3d8e20b</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs pt-1">
+<div class="bg-surface-container-lowest p-2 rounded border border-outline-variant/20">
+<span class="text-secondary font-medium">Proto Contract:</span>
+<div class="text-primary truncate">proto/v1/telemetry.proto (L15–L88)</div>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded border border-outline-variant/20">
+<span class="text-secondary font-medium">Middleware:</span>
+<div class="text-primary truncate">server/grpc_interceptor.go (L30–L72)</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-md">
+<div class="bg-surface-container-low/60 rounded p-space-sm border border-outline-variant/30">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-semibold flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px] text-outline">help_outline</span>
+              What remains unproven:
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              gRPC-Web proxy configuration and reciprocal TLS (mTLS) cert rotation routines not found in repo code.
+            </p>
+</div>
+<div class="bg-surface-container-low/60 rounded p-space-sm border border-outline-variant/30">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-semibold flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px] text-outline">block</span>
+              Scan boundary &amp; limitations:
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Only root proto definitions parsed; vendored third-party submodules were skipped.
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- ITEM 3: Partially Demonstrated with Distinct Suggestions -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl overflow-hidden">
+<div class="p-space-lg">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-medium">REQ-03 · CLOUD ORCHESTRATION</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-300 font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px] text-amber-700">warning</span>
+                Partially demonstrated
+              </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold">
+              Kubernetes Operator &amp; CRD Development
+            </h2>
+</div>
+<div class="shrink-0 flex items-center gap-2"><a class="inline-flex items-center gap-1 px-3 py-1 rounded bg-surface-container-lowest border border-outline-variant text-secondary font-code-inline text-label-sm hover:bg-surface-container transition-colors" href="#" data-screen="screen-8"><span class="material-symbols-outlined text-[15px]">terminal</span><span class="">Inspect supporting code</span></a></div>
+</div>
+<p class="mt-space-md font-body-md text-body-md text-on-surface leading-relaxed">
+          Custom Resource Definitions (CRDs) and Kubebuilder controller scaffolds found, but reconciliation loop contains basic status updates without finalizers or leader election.
+        </p>
+<!-- Provenance Reference -->
+<div class="mt-space-md p-space-md bg-surface-container-low rounded-lg border border-outline-variant/30 font-code-inline text-code-inline flex flex-wrap items-center gap-x-space-lg gap-y-1 text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="text-secondary font-medium">Repository:</span>
+<span class="text-primary font-semibold">acme-corp/cloud-orchestrator</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-secondary font-medium">Ref:</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded text-primary">staging @ e104f82</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-secondary font-medium">File:</span>
+<span class="text-primary">controllers/cluster_controller.go [L55–L102]</span>
+</div>
+</div>
+<div class="mt-space-md bg-surface-container-low/60 rounded p-space-sm border border-outline-variant/30">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-semibold flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px] text-outline">help_outline</span>
+            What remains unproven:
+          </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Dynamic admission webhooks, horizontal pod autoscaling triggers, and CRD conversion webhooks.
+          </p>
+</div>
+<!-- Visually Separated Suggestions Box -->
+<div class="mt-space-md p-space-md bg-surface-container-high/60 border border-secondary/30 rounded-lg">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">lightbulb</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Recommended Portfolio Actions / To Demonstrate</span>
+<span class="font-code-inline text-[11px] bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.2 rounded font-normal">Actionable Gap</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Implement admission webhooks in <code class="font-code-inline text-code-inline bg-surface-container px-1 py-0.5 rounded text-primary">api/v1/webhook_types.go</code> and include end-to-end tests using the <code class="font-code-inline text-code-inline bg-surface-container px-1 py-0.5 rounded text-primary">envtest</code> suite to demonstrate complete operator lifecycle handling.
+          </p>
+</div>
+</div>
+</div>
+<!-- ITEM 4: Partially Demonstrated -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl overflow-hidden">
+<div class="p-space-lg">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-medium">REQ-04 · DATA PERSISTENCE &amp; STORAGE</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-300 font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px] text-amber-700">warning</span>
+                Partially demonstrated
+              </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold">
+              PostgreSQL Query Optimization &amp; Database Sharding
+            </h2>
+</div>
+<div class="shrink-0 flex items-center gap-2"><a class="inline-flex items-center gap-1 px-3 py-1 rounded bg-surface-container-lowest border border-outline-variant text-secondary font-code-inline text-label-sm hover:bg-surface-container transition-colors" href="#" data-screen="screen-8"><span class="material-symbols-outlined text-[15px]">terminal</span><span class="">Inspect supporting code</span></a></div>
+</div>
+<p class="mt-space-md font-body-md text-body-md text-on-surface leading-relaxed">
+          SQL migration scripts and GORM models show explicit indexing on foreign keys and compound query filters, but no partition pruning or sharding logic detected.
+        </p>
+<!-- Provenance Reference -->
+<div class="mt-space-md p-space-md bg-surface-container-low rounded-lg border border-outline-variant/30 font-code-inline text-code-inline flex flex-wrap items-center gap-x-space-lg gap-y-1 text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="text-secondary font-medium">Repository:</span>
+<span class="text-primary font-semibold">acme-corp/order-processing-service</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-secondary font-medium">Ref:</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded text-primary">main @ 7f3a91c</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-secondary font-medium">File:</span>
+<span class="text-primary">migrations/0004_create_orders_indices.sql [L1–L24]</span>
+</div>
+</div>
+<div class="mt-space-md bg-surface-container-low/60 rounded p-space-sm border border-outline-variant/30">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-semibold flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px] text-outline">help_outline</span>
+            What remains unproven:
+          </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Table partitioning (pg_partman), sharding routing layers (Citus), or explicit query <code class="font-code-inline text-xs">EXPLAIN ANALYZE</code> optimization records.
+          </p>
+</div>
+<!-- Visually Separated Suggestions Box -->
+<div class="mt-space-md p-space-md bg-surface-container-high/60 border border-secondary/30 rounded-lg">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">lightbulb</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Recommended Portfolio Actions / To Demonstrate</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Add migration tests or documentation of partition maintenance if implemented in un-scanned infrastructure scripts.
+          </p>
+</div>
+</div>
+</div>
+<!-- ITEM 5: Not Demonstrated in Scanned Repositories -->
+<div class="bg-surface-container-lowest border border-slate-300 rounded-xl overflow-hidden">
+<div class="p-space-lg">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-medium">REQ-05 · APPLICATION PROTOCOLS</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-800 border border-slate-300 font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px] text-slate-600">cancel</span>
+                Not demonstrated in scanned repositories
+              </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold">
+              GraphQL Federation &amp; Apollo Gateway
+            </h2>
+</div>
+<div class="shrink-0 flex items-center gap-2"><a class="inline-flex items-center gap-1 px-3 py-1 rounded bg-surface-container text-on-surface-variant border border-outline-variant/40 font-code-inline text-label-sm hover:bg-surface-container-high transition-colors" href="#" data-screen="screen-8"><span class="material-symbols-outlined text-[15px]">link</span><span class="">View repository source</span></a></div></div>
+<!-- Strict Negative Requirement Notice -->
+<div class="mt-space-md p-space-md bg-slate-50 border border-slate-200 rounded-lg text-slate-800 font-body-md flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-slate-500 text-[20px]">info</span>
+<span class="font-medium">No supporting evidence found in the scanned repositories.</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-md">
+<div class="bg-surface-container-low/60 rounded p-space-sm border border-outline-variant/30">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-semibold flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px] text-outline">help_outline</span>
+              What remains unproven:
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              All components of GraphQL schema stitching, subgraphs, and Apollo Federation v2 directives.
+            </p>
+</div>
+<div class="bg-surface-container-low/60 rounded p-space-sm border border-outline-variant/30">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-semibold flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px] text-outline">block</span>
+              Scan boundary &amp; limitations:
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Scanned repositories contain pure REST and gRPC gateways. If GraphQL is utilized in an un-scanned private frontend or microservice repo, it is omitted here.
+            </p>
+</div>
+</div>
+<!-- Visually Separated Suggestions Box -->
+<div class="mt-space-md p-space-md bg-surface-container-high/60 border border-outline-variant/40 rounded-lg">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">add_task</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">To establish proof</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Grant read access to the service containing your Apollo Gateway configuration or push a sample subgraph implementation.
+          </p>
+</div>
+</div>
+</div>
+<!-- ITEM 6: Not Demonstrated in Scanned Repositories -->
+<div class="bg-surface-container-lowest border border-slate-300 rounded-xl overflow-hidden">
+<div class="p-space-lg">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-medium">REQ-06 · SEARCH &amp; ANALYTICS ENGINES</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-800 border border-slate-300 font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px] text-slate-600">cancel</span>
+                Not demonstrated in scanned repositories
+              </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold">
+              Elasticsearch / OpenSearch Cluster Management &amp; Index Tuning
+            </h2>
+</div>
+<div class="shrink-0 flex items-center gap-2"><a class="inline-flex items-center gap-1 px-3 py-1 rounded bg-surface-container text-on-surface-variant border border-outline-variant/40 font-code-inline text-label-sm hover:bg-surface-container-high transition-colors" href="#" data-screen="screen-8"><span class="material-symbols-outlined text-[15px]">link</span><span class="">View repository source</span></a></div></div>
+<!-- Strict Negative Requirement Notice -->
+<div class="mt-space-md p-space-md bg-slate-50 border border-slate-200 rounded-lg text-slate-800 font-body-md flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-slate-500 text-[20px]">info</span>
+<span class="font-medium">No supporting evidence found in the scanned repositories.</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-md">
+<div class="bg-surface-container-low/60 rounded p-space-sm border border-outline-variant/30">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-semibold flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px] text-outline">help_outline</span>
+              What remains unproven:
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Index lifecycle management (ILM), custom analyzer definitions, and bulk ingestion pipelines.
+            </p>
+</div>
+<div class="bg-surface-container-low/60 rounded p-space-sm border border-outline-variant/30">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-semibold flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px] text-outline">block</span>
+              Scan boundary &amp; limitations:
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Elasticsearch client libraries were listed in <code class="font-code-inline text-xs">go.mod</code> (indirect), but no direct query builders or client initialization were identified in scanned source files.
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- ITEM 7: Uncertain -->
+<div class="bg-surface-container-lowest border border-indigo-200 rounded-xl overflow-hidden">
+<div class="p-space-lg">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-medium">REQ-07 · INFRASTRUCTURE AS CODE</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-800 border border-indigo-300 font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px] text-indigo-700">help</span>
+                Uncertain
+              </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold">
+              Terraform &amp; Multi-Cloud Infrastructure as Code (AWS/GCP)
+            </h2>
+</div>
+<div class="shrink-0 flex items-center gap-2"><a class="inline-flex items-center gap-1 px-3 py-1 rounded bg-surface-container-lowest border border-outline-variant text-secondary font-code-inline text-label-sm hover:bg-surface-container transition-colors" href="#" data-screen="screen-8"><span class="material-symbols-outlined text-[15px]">terminal</span><span class="">Inspect supporting code</span></a></div>
+</div>
+<p class="mt-space-md font-body-md text-body-md text-on-surface leading-relaxed">
+          Repository <code class="font-code-inline text-code-inline bg-surface-container px-1 py-0.5 rounded">infra-bootstrap</code> contains HCL files referencing AWS VPC and EKS, but files could not be parsed completely due to uncommitted template variables and AST parser depth limits.
+        </p>
+<!-- Provenance Reference -->
+<div class="mt-space-md p-space-md bg-surface-container-low rounded-lg border border-outline-variant/30 font-code-inline text-code-inline flex flex-wrap items-center gap-x-space-lg gap-y-1 text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="text-secondary font-medium">Repository:</span>
+<span class="text-primary font-semibold">acme-corp/infra-bootstrap</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-secondary font-medium">Ref:</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded text-primary">main @ 11a9c40</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-secondary font-medium">File:</span>
+<span class="text-primary">terraform/aws/eks.tf [L1–L45]</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-md">
+<div class="bg-surface-container-low/60 rounded p-space-sm border border-outline-variant/30">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-semibold flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px] text-outline">help_outline</span>
+              What remains unproven:
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Whether modules are tested in staging or merely copied boilerplates.
+            </p>
+</div>
+<div class="bg-surface-container-low/60 rounded p-space-sm border border-outline-variant/30">
+<span class="font-code-inline text-label-sm text-on-surface-variant font-semibold flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px] text-outline">block</span>
+              Scan boundary &amp; limitations:
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Parser encountered unknown remote module source references (<code class="font-code-inline text-xs">terraform-aws-modules/eks/aws v18.0</code>). Validation requires live provider credentials, which are strictly disallowed.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Evidence Verification Principles Disclaimer Notice -->
+<div class="mt-space-xl p-space-md bg-surface-container-low border border-outline-variant/30 rounded-lg flex items-start gap-space-md">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">verified_user</span>
+<div class="space-y-1">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Evidence Verification Principles</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        ProofPath AI evaluates strictly observable source code, unit tests, configuration files, and commit timestamps. We do not synthesize scores, confidence indexes, or candidate rankings. Every claim must correlate directly to identifiable syntax trees or validated repository artifacts.
+      </p>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-md"><div class="max-w-7xl mx-auto px-margin-desktop flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm"><span class="font-code-inline text-code-inline">ProofPath AI</span><div class="flex items-center gap-space-lg font-code-inline text-code-inline"><span class="">Deterministic AST Skill Gap Verification</span></div></div></footer>
+
+</body></html>

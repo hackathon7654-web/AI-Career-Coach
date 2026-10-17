@@ -1,0 +1,3 @@
+"""
+ProofPath AI — Schemas Package
+"""
