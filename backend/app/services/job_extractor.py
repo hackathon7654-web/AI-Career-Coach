@@ -68,7 +68,11 @@ PREFERRED_SECTION_PATTERNS = [
 def extract_title_and_company(text: str, fallback_title: Optional[str] = None) -> Tuple[str, Optional[str]]:
     """
     Extracts job title and hiring company from the initial lines of the posting text.
+    Guarantees title and company are always bound to avoid UnboundLocalError.
     """
+    title: str = (fallback_title.strip() if fallback_title and fallback_title.strip() else "") or "Target Role"
+    company: Optional[str] = None
+
     # Check if initial title has "Job Application for <Role> at <Company>"
     if fallback_title:
         app_match = re.search(r"(?i)Job Application for\s+(.+?)\s+at\s+(.+)", fallback_title)
@@ -80,7 +84,7 @@ def extract_title_and_company(text: str, fallback_title: Optional[str] = None) -
     if not lines:
         return title, company
 
-    for idx, line in enumerate(lines[:15]):
+    for idx, line in enumerate(lines[:20]):
         # "Job Application for <Role> at <Company>" in body
         app_match = re.search(r"(?i)Job Application for\s+(.+?)\s+at\s+(.+)", line)
         if app_match:
@@ -108,11 +112,20 @@ def extract_title_and_company(text: str, fallback_title: Optional[str] = None) -
             continue
 
     # If title still generic, use the first non-empty line if it looks like a headline (< 80 chars)
-    if title in ("Target Role", "page_title") and lines:
+    if title in ("Target Role", "page_title", "") and lines:
         for candidate_line in lines[:5]:
-            if len(candidate_line) < 80 and not re.search(r"[:\d]", candidate_line) and candidate_line.lower() not in ("page_title", "back to jobs", "apply"):
+            if (
+                len(candidate_line) < 80
+                and not re.search(r"[:\d]", candidate_line)
+                and candidate_line.lower() not in ("page_title", "back to jobs", "apply", "share", "overview")
+            ):
                 title = candidate_line
                 break
+
+    # Clean up and ensure fallback values
+    title = title.strip() if title else "Target Job"
+    if company:
+        company = company.strip() or None
 
     return title, company
 
@@ -195,7 +208,7 @@ def parse_job_requirements(
             requirements.append(
                 ExtractedRequirement(
                     id=req_id,
-                    skill_name=skill_name,
+                    skill_name=skill_name or "Technical Competency",
                     category=current_category,
                     description=content,
                     provenance=provenance,
@@ -227,5 +240,22 @@ def parse_job_requirements(
                         is_candidate_edited=False,
                     )
                 )
+
+    # Absolute fallback if still empty (ensures UI review screen never fails)
+    if not requirements:
+        tags = extract_tags_from_text(raw_text)
+        requirements.append(
+            ExtractedRequirement(
+                id="req_01",
+                skill_name="Demonstrated Engineering Capability",
+                category="core_required",
+                description=raw_text[:200].strip() or "General software engineering and problem-solving capability.",
+                provenance=provenance,
+                tags=tags,
+                section_label="General Requirements",
+                is_included=True,
+                is_candidate_edited=False,
+            )
+        )
 
     return title, company, requirements

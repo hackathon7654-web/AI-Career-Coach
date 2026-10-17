@@ -62,18 +62,30 @@ Preferred / Differentiators:
 
   const handleUrlSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!jobUrl.trim()) return;
+    let url = jobUrl.trim();
+    if (!url) return;
 
     if (!hasActiveSession) {
       setErrorMessage('Please connect your GitHub profile on Screen 1 before ingesting a job.');
       return;
     }
 
+    // Auto-normalize missing protocol e.g. careers.jio.com/job/123
+    if (!url.startsWith('http://') && !url.startsWith('https://')) {
+      if (url.includes('.') && !url.includes(' ') && !url.startsWith('?')) {
+        url = `https://${url}`;
+        setJobUrl(url);
+      } else {
+        setErrorMessage('Invalid URL format. Please enter a complete public job URL (e.g. https://company.com/job) or switch to the Paste Description tab.');
+        return;
+      }
+    }
+
     setIsExtracting(true);
     setErrorMessage('');
     try {
       const pid = sessionStore.getPortfolioId() || undefined;
-      const res = await api.createJob({ job_url: jobUrl.trim(), portfolio_id: pid });
+      const res = await api.createJob({ job_url: url, portfolio_id: pid });
       sessionStore.setJobId(res.id);
       navigate(`/jobs/review?job_id=${encodeURIComponent(res.id)}`);
     } catch (err: any) {
@@ -258,7 +270,9 @@ Preferred / Differentiators:
             <div className="flex flex-col sm:flex-row items-stretch gap-2.5">
               <input
                 id="job-url"
-                type="url"
+                type="text"
+                inputMode="url"
+                autoComplete="url"
                 disabled={isExtracting}
                 value={jobUrl}
                 onChange={(e) => {
@@ -300,8 +314,11 @@ Preferred / Differentiators:
               </div>
               <button
                 type="button"
-                onClick={() => setMode('paste')}
-                className="underline font-medium hover:text-[#78350F] cursor-pointer"
+                onClick={() => {
+                  setMode('paste');
+                  setErrorMessage('');
+                }}
+                className="underline font-medium hover:text-[#78350F] cursor-pointer whitespace-nowrap shrink-0"
               >
                 Switch to Paste
               </button>

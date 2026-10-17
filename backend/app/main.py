@@ -9,6 +9,7 @@ from app.api.scans import router as scans_router
 from app.api.jobs import router as jobs_router
 from app.api.assessments import router as assessments_router
 from app.api.webhooks import router as webhooks_router
+from fastapi.exceptions import RequestValidationError
 from fastapi import HTTPException
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
@@ -62,13 +63,32 @@ def create_app() -> FastAPI:
                 headers=getattr(exc, "headers", None),
             )
 
+        # Handle request body and parameter validation errors cleanly
+        if isinstance(exc, RequestValidationError):
+            errors = exc.errors()
+            messages = []
+            for err in errors:
+                msg = err.get("msg", "")
+                if msg.startswith("Value error, "):
+                    msg = msg[len("Value error, "):]
+                field = " -> ".join(str(loc) for loc in err.get("loc", []) if loc != "body")
+                if field and field != "__root__":
+                    messages.append(f"{field}: {msg}")
+                else:
+                    messages.append(msg)
+            clean_message = "; ".join(messages) if messages else "Invalid request data format."
+            return JSONResponse(
+                status_code=422,
+                content={"detail": clean_message},
+            )
+
         logger.error(
             f"Unhandled exception on {request.method} {request.url.path}: {str(exc)}",
-            exc_info=settings.DEBUG,
+            exc_info=True,
         )
         return JSONResponse(
             status_code=500,
-            content={"detail": "An internal server error occurred."},
+            content={"detail": f"An internal server error occurred: {str(exc)}" if settings.DEBUG else "An internal server error occurred. Please try pasting the job description text directly."},
         )
 
     return app

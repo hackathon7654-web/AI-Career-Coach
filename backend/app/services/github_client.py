@@ -57,18 +57,21 @@ class GitHubSSRFError(GitHubClientError):
         super().__init__(f"Request target rejected by SSRF security policy: {url}", status_code=400)
 
 
+_TOKEN_DEFAULT = object()
+
+
 class GitHubClient:
     """
     Asynchronous client for interacting with the GitHub REST API.
     """
     def __init__(
         self,
-        token: Optional[str] = None,
+        token: Any = _TOKEN_DEFAULT,
         base_url: Optional[str] = None,
         timeout: Optional[float] = None,
         client: Optional[httpx.AsyncClient] = None,
     ):
-        self.token = token or settings.GITHUB_TOKEN
+        self.token = settings.GITHUB_TOKEN if token is _TOKEN_DEFAULT else token
         self.base_url = (base_url or settings.GITHUB_API_BASE_URL).rstrip("/")
         self.timeout = timeout or settings.GITHUB_TIMEOUT_SECONDS
         self._custom_client = client

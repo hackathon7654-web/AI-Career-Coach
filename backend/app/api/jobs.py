@@ -165,10 +165,10 @@ async def ingest_job(
         except JobFetchError as exc:
             raise HTTPException(status_code=exc.status_code, detail=exc.message)
         except Exception as exc:
-            logger.error(f"Unexpected error fetching job URL: {exc}")
+            logger.error(f"Unexpected error fetching job URL: {exc}", exc_info=True)
             raise HTTPException(
-                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                detail="Failed to retrieve job URL. Please paste the job description text.",
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"Unable to fetch job description from this URL ({type(exc).__name__}). Career portals frequently block automated scraping or require JavaScript. Please switch to the 'Paste Description' tab and paste the text directly.",
             )
     else:
         raw_text = payload.pasted_text.strip()
@@ -211,10 +211,10 @@ async def ingest_job(
             .execute()
         )
     except Exception as exc:
-        logger.error(f"Database error persisting job: {exc}")
+        logger.error(f"Database error persisting job: {exc}", exc_info=True)
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Failed to persist job record in database.",
+            detail=f"Failed to persist job record in database: {str(exc)}",
         )
 
     if not insert_res.data:
@@ -230,13 +230,13 @@ async def ingest_job(
         source_url=job_row.get("source_url"),
         provenance=job_row.get("provenance", provenance),
         raw_text=job_row.get("raw_text"),
-        title=job_row["title"],
-        company=job_row.get("company"),
+        title=job_row.get("title") or title or "Target Job",
+        company=job_row.get("company") or company,
         requirements=requirements,
-        retrieval_timestamp=job_row.get("retrieval_timestamp", ""),
-        limitations=job_row.get("limitations"),
-        is_archived=job_row.get("is_archived", False),
-        created_at=job_row.get("created_at", ""),
+        retrieval_timestamp=str(job_row.get("retrieval_timestamp") or ""),
+        limitations=job_row.get("limitations") or limitations_str,
+        is_archived=bool(job_row.get("is_archived", False)),
+        created_at=str(job_row.get("created_at") or ""),
     )
 
 

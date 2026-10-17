@@ -83,13 +83,37 @@ async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
   if (!response.ok) {
     let errorMessage = `Request failed with status ${response.status}`;
     try {
-      const errJson = await response.json();
-      if (errJson && errJson.detail) {
-        errorMessage = typeof errJson.detail === 'string' ? errJson.detail : JSON.stringify(errJson.detail);
+      const contentType = response.headers.get('content-type') || '';
+      if (contentType.includes('application/json')) {
+        const errJson = await response.json();
+        if (errJson && errJson.detail) {
+          if (Array.isArray(errJson.detail)) {
+            errorMessage = errJson.detail
+              .map((item: any) => {
+                if (typeof item === 'string') return item;
+                const msg = item.msg || item.message || JSON.stringify(item);
+                return msg.replace(/^Value error,\s*/i, '');
+              })
+              .join('; ');
+          } else if (typeof errJson.detail === 'string') {
+            errorMessage = errJson.detail;
+          } else {
+            errorMessage = JSON.stringify(errJson.detail);
+          }
+        } else if (errJson && errJson.message) {
+          errorMessage = typeof errJson.message === 'string' ? errJson.message : JSON.stringify(errJson.message);
+        }
+      } else {
+        // Response is HTML or plain text (e.g. gateway error, 502/503/530 Cloudflare tunnel down)
+        const text = await response.text();
+        if (text.includes('Cloudflare Tunnel error') || text.includes('Error 1033') || response.status === 530) {
+          errorMessage = 'Backend tunnel connection is offline. Please ensure your backend dev server and tunnel are running.';
+        } else if (response.statusText) {
+          errorMessage = `${response.statusText} (${response.status})`;
+        }
       }
     } catch {
-      // Fallback to status text
-      if (response.statusText) errorMessage = response.statusText;
+      if (response.statusText) errorMessage = `${response.statusText} (${response.status})`;
     }
     throw new ApiError(errorMessage, response.status);
   }

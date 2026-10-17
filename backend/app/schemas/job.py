@@ -33,11 +33,15 @@ class JobIngestRequest(BaseModel):
         clean = v.strip()
         if not clean:
             return None
+        # Auto-prepend https:// if scheme was omitted but domain is present
+        if not (clean.startswith("http://") or clean.startswith("https://")):
+            if "://" not in clean and ("." in clean.split("/")[0] or "localhost" in clean.split("/")[0]):
+                clean = f"https://{clean}"
+            else:
+                raise ValueError("Invalid URL format. Please enter a full job URL (e.g. https://company.com/job) or switch to the 'Paste Description' tab.")
         # Reject credentials in URL e.g. http://user:pass@host
         if "@" in clean.split("/")[2] if len(clean.split("/")) > 2 else False:
             raise ValueError("Credentials embedded in job URLs are strictly prohibited.")
-        if not (clean.startswith("http://") or clean.startswith("https://")):
-            raise ValueError("Only http:// and https:// URLs are supported.")
         return clean
 
     @field_validator("pasted_text")
@@ -76,10 +80,10 @@ class JobResponse(BaseModel):
     title: str
     company: Optional[str] = None
     requirements: List[ExtractedRequirement] = Field(default_factory=list)
-    retrieval_timestamp: str
+    retrieval_timestamp: Optional[str] = ""
     limitations: Optional[str] = None
     is_archived: bool = False
-    created_at: str
+    created_at: Optional[str] = ""
 
 
 class RequirementsUpdateRequest(BaseModel):
