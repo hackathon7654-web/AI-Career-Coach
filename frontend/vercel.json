@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://soma-meanwhile-eco-collaboration.trycloudflare.com/api/$1"
+      "destination": "https://plc-prior-advertiser-copied.trycloudflare.com/api/$1"
     },
     {
       "source": "/(.*)",
